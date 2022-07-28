@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap");
+
+h1 h2 h3 h4 h5 h6 p span a {
+  font-family: "Inter", sans-serif;
+}
+
+.Header {
+  width: 100%;
+  height: 100px;
+  background-color: #380000;
+  position: sticky;
+  top: 0;
+  z-index: 90000000;
+}
+
+header {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Logo {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.Logo img {
+  width: 50px;
+}
+
+.Logo h3 {
+  font-size: 20px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.Search {
+  width: 450px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+.Search select {
+  padding: 10px;
+  width: 80px;
+  height: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.Search input {
+  width: 70%;
+  height: 100%;
+  padding-left: 10px;
+  border: none;
+  outline: none;
+  margin: 0px 5px;
+}
+
+.Sicon {
+  font-weight: 700;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.HeaderIcon {
+  /* width: 300px; */
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.IconAdd {
+  width: 60px;
+  position: relative;
+}
+
+.Log {
+  width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.Log h6 a {
+  font-size: 14px;
+  color: white;
+  width: 50px;
+  margin: 0px 10px;
+  text-decoration: none;
+}
+
+.Icons {
+  font-size: 35px;
+  color: white;
+}
+
+.NumAdd {
+  padding: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffd703;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+  right: 25px;
+  font-size: 12px;
+}
+
+.Mobile {
+  display: none;
+}
+
+.MobileMenu {
+  display: none;
+}
+
+.l {
+  display: flex;
+  flex-direction: column;
+}
+
+.IndexContainer {
+  width: 100%;
+  min-height: 100vh;
+  background-color: ecebeb;
+}
+
+.TopContainer {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+}
+
+article {
+  width: 98%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.MenuDiv {
+  width: 20%;
+  height: max-content;
+  background: white;
+  margin-left: 10px;
+  box-shadow: -5px -3px 21px -12px rgba(247, 247, 247, 0.28);
+  -webkit-box-shadow: -5px -3px 21px -12px rgba(247, 247, 247, 0.28);
+  -moz-box-shadow: -5px -3px 21px -12px rgba(247, 247, 247, 0.28);
+  border: 1px solid rgb(189, 189, 189);
+}
+
+.Nav ul li {
+  list-style-type: none;
+  font-weight: 500;
+  font-size: 15px;
+  margin: 20px 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 350ms;
+}
+
+.Nav ul li:hover {
+  text-decoration: underline;
+  transform: scale(1.03);
+}
+
+.Micon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.SliderDiv {
+  width: 70%;
+  height: 95%;
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.Sliders {
+  width: 95%;
+  height: 99%;
+  /* background: rgb(92, 2, 2); */
+}
+
+.Slid{
+  width: 100%;
+  height: 90%;
+}
+
+.Slid ul li button:before {
+  font-size: 10px;
+  color: rgb(150, 158, 171);
+}
+
+.SliderImg {
+  width: 100%;
+  height: 60%;
+}
+
+.SliderImg img {
+  width: 100%;
+  height: 75vh;
+}
+
+.Slid .slick-prev:before, .Slid .slick-next:before {
+  font-family: 'slick';
+  font-size: 20px;
+  line-height: 1;
+  opacity: .75;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
