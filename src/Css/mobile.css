@@ -1,0 +1,120 @@
+@media (max-width: 900px) {
+  .Header {
+    height: max-content;
+  }
+
+  .Logo {
+    width: 50px;
+    margin: 0px;
+  }
+
+  .Logo h3 {
+    font-size: 15px;
+  }
+
+  .HeaderIcon {
+    width: 170px;
+    /* background: #000; */
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .Search {
+    display: none;
+  }
+
+  .Log {
+    width: 100px;
+  }
+
+  .NumAdd {
+    right: 20px;
+  }
+
+  .Log h6 {
+    display: none;
+    margin: 0;
+  }
+
+  .Mobile {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .Menu {
+    margin: 25px 10px;
+    font-size: 30px;
+    color: white;
+  }
+
+  .SearchM {
+    width: 80%;
+    height: 50px;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+  }
+
+  .SearchM select {
+    padding: 10px;
+    width: 60px;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .SearchM input {
+    width: 65%;
+    height: 100%;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    margin: 0px 1px;
+  }
+
+  .SiconM {
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  .MobileMenu {
+    display: flex;
+    width: 70%;
+    height: 80vh;
+    /* background: #000; */
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Nav {
+    height: 100%;
+    width: 100%;
+  }
+
+  .Nav ul li {
+    list-style-type: none;
+    margin: 25px 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+  }
+
+  .Micon {
+    margin-right: 5px;
+    font-size: 20px;
+  }
+
+  .MenuDiv{
+    display: none;
+  }
+
+  .SliderDiv {
+    width: 100%;
+    margin: 0px;
+  }
+
+}
