@@ -255,7 +255,15 @@ article {
 
 .NewProductHead span {
   margin: 10px 20px;
-  font-size: 20px;
+  font-size: 16px;
   font-style: italic;
   color: rgb(52, 52, 52);
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 350ms;
+}
+
+.NewProductHead span:hover{
+  transform: scale(1.02);
+  text-decoration: underline;
 }
