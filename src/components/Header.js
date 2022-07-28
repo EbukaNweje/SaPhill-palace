@@ -48,7 +48,7 @@ const Header = () => {
                 </div>
                 <div className='IconAdd Log'>
                     <HiOutlineUser className='Icons'/>
-                    <h6><a href='#'>Log in Register</a></h6>
+                    <h6>Log in Register</h6>
                 </div>
             </div>
         </header>
