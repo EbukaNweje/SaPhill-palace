@@ -12,6 +12,10 @@ const Index = () => {
             <div className='SliderDiv'><Slider/></div>
           </article>
       </div>
+
+      <div>
+        NewProduct
+      </div>
     </div>
   )
 }
