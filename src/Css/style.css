@@ -229,15 +229,16 @@ article {
 
 .NewProduct {
   width: 100%;
-  height: 40vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   color: black;
+  /* background: red; */
 }
 
 .NewProductAll {
   display: block;
-  background: white;
+  /* background: green; */
 }
 
 .NewProductHead {
@@ -263,7 +264,108 @@ article {
   transition: all 350ms;
 }
 
-.NewProductHead span:hover{
+.NewProductHead span:hover {
   transform: scale(1.02);
   text-decoration: underline;
+}
+
+.NewPor {
+  /* background: blue; */
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.ProductSlider {
+  width: 90%;
+  height: 100%;
+  /* background: #000; */
+}
+
+.ProductSliderSlider {
+  align-items: center;
+  display: flex;
+  padding: 5px;
+}
+
+.NewPrudCard {
+  max-width: 90%;
+  height: 47vh;
+  margin-left: 10px;
+  transition: all 0.1s ease;
+  transform: scale(1);
+  /* border: 1px solid rgb(49, 49, 49); */
+}
+
+.NewPrudCard:hover {
+  box-shadow: 3px 2px 10px -2px rgba(226, 225, 225, 0.126);
+  -webkit-box-shadow: 3px 2px 10px -2px rgba(168, 168, 168, 0.239);
+  -moz-box-shadow: 3px 2px 10px -2px rgba(241, 237, 237, 0.131);
+  transform: scale(1.02);
+}
+
+.ProductSliderSlider .slick-prev,
+.ProductSliderSlider .slick-next{
+  width: 50px;
+  height: 50px;
+  background-color: #380000;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+.ProductSliderSlider .slick-prev:before,
+.ProductSliderSlider .slick-next:before {
+  font-family: "slick";
+  font-size: 30px;
+  line-height: 1;
+  opacity: 0.75;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #380000;
+  border-radius: 50%;
+}
+
+.ProductImg {
+  width: 100%;
+  height: 65%;
+  background: #000;
+  color: white;
+}
+
+.NewPrudCard h3 {
+  font-size: 14px;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  line-height: 2;
+  color: rgb(40, 40, 40);
+}
+
+.NewPrudCard span,
+p {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Helvetica Neue", Arial, sans-serif;
+  color: rgb(40, 40, 40);
+}
+
+.ProductPriceDic {
+  text-decoration: line-through;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.AddButton {
+  font-size: 22px;
+  padding: 5px;
+}
+
+.IconC {
+  color: #380000;
+  margin: 0px 5px;
+  font-weight: 700;
+  cursor: pointer;
 }

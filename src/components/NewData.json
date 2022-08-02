@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "Name": "Smiley Quality Hoodie",
+        "Price": 9000,
+        "DicPrice": 1100,
+        "Image": "https://xpresspoint.ng/wp-content/uploads/2020/09/c7-300x300.jpg" 
+    },
+    {
+        "id": 2,
+        "Name": "Essentials Quality Hoodie",
+        "Price": 1200,
+        "DicPrice": 1100,
+        "Image": "https://xpresspoint.ng/wp-content/uploads/2020/09/c6-300x300.jpg" 
+    },
+    {
+        "id": 3,
+        "Name": "Gucci Quality Hoodie",
+        "Price": 1000,
+        "DicPrice": 1100,
+        "Image": "https://xpresspoint.ng/wp-content/uploads/2020/09/c5-300x300.jpg" 
+    },
+    {
+        "id": 4,
+        "Name": "Quality Hoodie",
+        "Price": 21000,
+        "DicPrice": 1100,
+        "Image": "https://xpresspoint.ng/wp-content/uploads/2020/09/c4-300x300.jpg" 
+    },
+    {
+        "id": 5,
+        "Name": "Black Quality Hoodie",
+        "Price": 20000,
+        "DicPrice": 1100,
+       "Image": "https://xpresspoint.ng/wp-content/uploads/2020/09/c3-300x300.jpg" 
+    },
+    {
+        "id": 6,
+        "Name": "Quality Hoodie",
+        "Price": 1000,
+        "DicPrice": 1100,
+        "Image": "https://xpresspoint.ng/wp-content/uploads/2020/09/c2-300x300.jpg" 
+    },
+    {
+        "id": 7,
+        "Name": "Pecham Wrist-Watch",
+        "Price": 5000,
+        "DicPrice": 1100,
+        "Image": "https://xpresspoint.ng/wp-content/uploads/2020/09/w6-300x300.jpg" 
+    },
+    {
+        "id": 8,
+        "Name": "Rado Wrist-Watch",
+        "Price": 9000,
+        "DicPrice": 1100,
+        "Image": "https://xpresspoint.ng/wp-content/uploads/2020/09/w7-300x300.jpg" 
+    },
+    {
+        "id": 9,
+        "Name": "Rado Gold Wrist-Watch",
+        "Price": 20000,
+        "DicPrice": 1100,
+        "Image": "https://xpresspoint.ng/wp-content/uploads/2020/09/w8-300x300.jpg" 
+    },
+    {
+        "id": 10,
+        "Name": "Smiley Quality Hoodie",
+        "Price": 9000,
+        "DicPrice": 1100,
+       "Image": "https://xpresspoint.ng/wp-content/uploads/2020/09/w8-300x300.jpg" 
+    },
+    {
+        "id": 11,
+        "Name": "Smiley Quality Hoodie",
+        "Price": 9000,
+        "DicPrice": 1100,
+        "Image": "https://xpresspoint.ng/wp-content/uploads/2020/09/w8-300x300.jpg" 
+    },
+    {
+        "id": 12,
+        "Name": "Smiley Quality Hoodie",
+        "Price": 9000,
+        "DicPrice": 1100,
+        "Image": "https://xpresspoint.ng/wp-content/uploads/2020/09/w8-300x300.jpg" 
+    },
+    {
+        "id": 13,
+        "Name": "Smiley Quality Hoodie",
+        "Price": 9000,
+        "DicPrice": 1100,
+        "Image": "https://xpresspoint.ng/wp-content/uploads/2020/09/w8-300x300.jpg" 
+    },
+    {
+        "id": 14,
+        "Name": "Smiley Quality Hoodie",
+        "Price": 9000,
+        "DicPrice": 1100,
+        "Image": "https://xpresspoint.ng/wp-content/uploads/2020/09/w8-300x300.jpg" 
+    },
+    {
+        "id": 15,
+        "Name": "Smiley Quality Hoodie",
+        "Price": 9000,
+        "DicPrice": 1100,
+       "Image": "https://xpresspoint.ng/wp-content/uploads/2020/09/w8-300x300.jpg" 
+    },
+    {
+        "id": 16,
+        "Name": "Smiley Quality Hoodie",
+        "Price": 9000,
+        "DicPrice": 1100,
+        "Image": "https://xpresspoint.ng/wp-content/uploads/2020/09/w8-300x300.jpg" 
+    },
+    {
+        "id": 17,
+        "Name": "Smiley Quality Hoodie",
+        "Price": 9000,
+        "DicPrice": 1100,
+        "Image": "https://xpresspoint.ng/wp-content/uploads/2020/09/w8-300x300.jpg" 
+    },
+    {
+        "id": 18,
+        "Name": "Smiley Quality Hoodie",
+        "Price": 9000,
+        "DicPrice": 1100,
+        "Image": "https://xpresspoint.ng/wp-content/uploads/2020/09/w8-300x300.jpg" 
+    },
+    {
+        "id": 19,
+        "Name": "Smiley Quality Hoodie",
+        "Price": 9000,
+        "DicPrice": 1100,
+        "Image": "https://xpresspoint.ng/wp-content/uploads/2020/09/w8-300x300.jpg" 
+    },
+    {
+        "id": 20,
+        "Name": "Smiley Quality Hoodie",
+        "Price": 9000,
+        "DicPrice": 1100,
+       "Image": "https://xpresspoint.ng/wp-content/uploads/2020/09/w8-300x300.jpg" 
+    }
+]

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap");
+
 @media (max-width: 900px) {
   .Header {
     height: max-content;
@@ -14,7 +16,6 @@
 
   .HeaderIcon {
     width: 170px;
-    /* background: #000; */
     display: flex;
     justify-content: space-around;
   }
@@ -64,10 +65,11 @@
     outline: none;
     border: none;
     border-radius: 5px;
+    display: none;
   }
 
   .SearchM input {
-    width: 65%;
+    width: 85%;
     height: 100%;
     padding-left: 10px;
     border: none;
@@ -108,13 +110,32 @@
     font-size: 20px;
   }
 
-  .MenuDiv{
+  .MenuDiv {
     display: none;
   }
 
   .SliderDiv {
     width: 100%;
     margin: 0px;
+  }
+
+  .TopContainer {
+    height: 50vh;
+    padding: 0px;
+  }
+
+  .SliderImg img {
+    width: 100%;
+    height: 45vh;
+  }
+
+  .Slid .slick-prev:before,
+  .Slid .slick-next:before {
+    display: none;
+  }
+
+  .Sliders {
+    width: 85%;
   }
 
 }
