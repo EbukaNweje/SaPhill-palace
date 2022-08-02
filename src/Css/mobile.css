@@ -138,4 +138,14 @@
     width: 85%;
   }
 
+  .Deliv {
+    height: max-content;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .DelivCon {
+    padding: 20px;
+  }
+
 }

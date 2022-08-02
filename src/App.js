@@ -6,6 +6,7 @@ import {
   Route,
 } from "react-router-dom";
 import Index from './components/Index';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Index />}/>
     </Routes>
+    <Footer/>
   </BrowserRouter>
   )
 }
