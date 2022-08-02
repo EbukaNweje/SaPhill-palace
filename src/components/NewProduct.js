@@ -21,7 +21,8 @@ const NewProduct = () => {
 
   let settings;
 
-      {isDesktop ? 
+    
+      isDesktop ? 
     settings = {
     dots: false,
     infinite: false,
@@ -36,16 +37,7 @@ const NewProduct = () => {
         slidesToShow: 5,
         slidesToScroll: 3
       }
-    }
-
-// const settings = {
-//     dots: false,
-//     infinite: false,
-//     speed: 500,
-//     slidesToShow: 5,
-//     slidesToScroll: 3
-//   };
- 
+    
 
 return (
     <div className='ProductSlider'>
