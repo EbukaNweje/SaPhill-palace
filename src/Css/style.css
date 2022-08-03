@@ -513,5 +513,6 @@ p {
 
 .CartPoprs {
   width: 100%;
-  height: ;
+  height: 25vh;
+  border-bottom: 1px solid #E3E3E3;
 }

@@ -43,7 +43,7 @@ const Cart = () => {
 
           <div className="CartPropsBody">
               <div className="CartPoprs">
-
+                
               </div>
           </div>
         </article>
