@@ -27,7 +27,28 @@ const Cart = () => {
     dispatch(totalState());
   }, [data]);
   return (
-    <div>Cart</div>
+    <div className="CartContainer">
+        <div className="CartHeader">
+          <h2>Shopping Cart</h2>
+        </div>
+      
+      <div className="CartList">
+        <article className="CartBody">
+          <div className="CartListHead">
+            <div className="Prd"><h5>	PRODUCT</h5></div>
+            <div className="Prc"><h5>PRICE</h5></div>
+            <div className="Qutt"><h5>QUANTITY</h5></div>
+            <div><h5>TOTAL</h5></div>
+          </div>
+
+          <div className="CartPropsBody">
+              <div className="CartPoprs">
+
+              </div>
+          </div>
+        </article>
+      </div>
+    </div>
   )
 }
 
