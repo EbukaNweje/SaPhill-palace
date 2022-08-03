@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react'
 import Slider from "react-slick";
 import "../Css/style.css"
 import "../Css/mobile.css"
-
+import { useDispatch, useSelector } from "react-redux";
+import { addBooking, addProduct } from "./Global/ProductState";
 import {  AiOutlineHeart, AiOutlineShoppingCart,  } from 'react-icons/ai';
 import NewData from "../components/NewData.json"
 
 
 const SaPhillHairs = () => {
+  const dispatch = useDispatch();
+  dispatch(addProduct(NewData));
     const [isDesktop, setDesktop] = useState(window.innerWidth > 1450);
 
     const updateMedia = () => {
@@ -49,7 +52,7 @@ const SaPhillHairs = () => {
            <span>&#8358; {props.Price} </span>
            <p className='ProductPriceDic'>&#8358; {props.DicPrice} </p>
            <div className='AddButton'>
-             <AiOutlineShoppingCart className='IconC'/>
+             <AiOutlineShoppingCart className='IconC' onClick={() => dispatch(addBooking(props))}/>
              <AiOutlineHeart className='IconC'/>
            </div>
          </div>

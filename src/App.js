@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import Index from './components/Index';
 import Footer from './components/Footer';
+import Cart from './components/Cart';
+
 
 const App = () => {
   return (
@@ -14,6 +16,7 @@ const App = () => {
     <Header/>
     <Routes>
       <Route path="/" element={<Index />}/>
+      <Route path='/cart' element={<Cart/>}/>
     </Routes>
     <Footer/>
   </BrowserRouter>
