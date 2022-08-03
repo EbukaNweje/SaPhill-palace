@@ -5,9 +5,14 @@ import { AiOutlineClose, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineMenu, A
 import { HiOutlineUser } from 'react-icons/hi';
 import Logo from "../asset/Logo.png"
 import Mobile from './Mobile';
+// import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useNavigate  } from "react-router-dom"
 
 
 const Header = () => {
+    const hist = useNavigate();
+    const cart = useSelector((state) => state.persisitedReducer.bookings);
     const [toggle, setToggle] = useState(false)
     const onToggle = () => {
         setToggle(!toggle)
@@ -18,7 +23,7 @@ const Header = () => {
         <header>
             <div className='Logo'>
                 <img src={Logo} alt='Logo'/>
-                <h3>SaPhill Palace</h3>
+                <h3  onClick={() => hist('/')}>SaPhill Palace</h3>
             </div>
             <article className='Search'>
                 <select>
@@ -43,8 +48,8 @@ const Header = () => {
                     <span className='NumAdd'>0</span>
                 </div>
                 <div className='IconAdd'>
-                    <AiOutlineShoppingCart className='Icons'/>
-                    <span className='NumAdd'>0</span>
+                   <AiOutlineShoppingCart className='Icons' onClick={() => hist('/cart')}/>
+                    <span className='NumAdd'>{cart.length}</span>
                 </div>
                 <div className='IconAdd Log'>
                     <HiOutlineUser className='Icons'/>
