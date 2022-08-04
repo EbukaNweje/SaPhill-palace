@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import Index from './components/Index';
 import Footer from './components/Footer';
-import Cart from './components/Cart';
+// import Cart from './components/Cart';
 import Booking from './components/Booking';
 
 
@@ -18,7 +18,7 @@ const App = () => {
     <Header/>
     <Routes>
       <Route path="/" element={<Index />}/>
-      <Route path='/cart' element={<Cart/>}/>
+      {/* <Route path='/cart' element={<Cart/>}/> */}
       <Route path='/paymentForm' element={<Booking/>}/>
     </Routes>
     <Footer/>
