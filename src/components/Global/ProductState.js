@@ -40,7 +40,7 @@ const ProductState = createSlice({
     },
 
     totalState: (state, { payload }) => {
-      const { totalCost, totalDays } = state.bookings.reduce(
+      const { totalCost } = state.bookings.reduce(
         (mainCost, allCost) => {
           const { Price, QTY } = allCost;
           const totalPrice = Price * QTY;
@@ -49,11 +49,11 @@ const ProductState = createSlice({
 
           return mainCost;
         },
-        { totalCost: 0, totalDays: 0 }
+        { totalCost: 0 }
       );
 
       state.totalRoomCost = totalCost;
-      state.totalRoomDays = totalDays;
+      // state.totalRoomDays = totalDays;
     },
   },
 });
