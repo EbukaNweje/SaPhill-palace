@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Slider from "react-slick";
 import "../Css/style.css"
 import "../Css/mobile.css"
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addBooking, addProduct } from "./Global/ProductState";
 import {  AiOutlineHeart, AiOutlineShoppingCart,  } from 'react-icons/ai';
 import NewData from "../components/NewData.json"

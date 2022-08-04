@@ -152,4 +152,24 @@
     height: max-content;
   }
 
+  .MB {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ProductImgCart {
+    width: 80%;
+  } 
+
+  .Total {
+    margin-left: 6px;
+  }
+
+  .CartPoprs {
+    height: max-content;
+  }
+
+  .CartHeader h2 {
+    font-size: 30px;
+  }
 }

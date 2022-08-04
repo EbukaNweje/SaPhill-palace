@@ -8,6 +8,8 @@ import {
 import Index from './components/Index';
 import Footer from './components/Footer';
 import Cart from './components/Cart';
+import Booking from './components/Booking';
+
 
 
 const App = () => {
@@ -17,6 +19,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Index />}/>
       <Route path='/cart' element={<Cart/>}/>
+      <Route path='/paymentForm' element={<Booking/>}/>
     </Routes>
     <Footer/>
   </BrowserRouter>

@@ -23,6 +23,8 @@ const Cart = () => {
   console.log("total", totalCostState);
   console.log(data);
 
+  let Sapping = 1000
+
   useEffect(() => {
     dispatch(totalState());
   }, [data]);
@@ -31,23 +33,77 @@ const Cart = () => {
         <div className="CartHeader">
           <h2>Shopping Cart</h2>
         </div>
-      
-      <div className="CartList">
+
+      {
+        data.length ? 
+        <div className="CartList">
         <article className="CartBody">
           <div className="CartListHead">
             <div className="Prd"><h5>	PRODUCT</h5></div>
             <div className="Prc"><h5>PRICE</h5></div>
             <div className="Qutt"><h5>QUANTITY</h5></div>
-            <div><h5>TOTAL</h5></div>
+            <div className="Total"><h5>TOTAL</h5></div>
           </div>
 
           <div className="CartPropsBody">
-              <div className="CartPoprs">
-                
+              {
+                data.map((props)=>(
+                  <div className="CartPoprs" key={props.id}>
+                <div className="Prd MT Pd MB">
+                    <div className="ProductImgCart"><img src={props.Image}/></div>
+                    <span className="ProductInfo">{props.Name}</span>
+                </div>
+                <div className="Prc MT"><span className="ProductInfo">&#8358; {props.Price}</span></div>
+                <div className="Qutt MT Quut MB">
+                  <div className="AddQut"
+                  onClick={() => {
+                    dispatch(addBooking(props));
+                  }}
+                  >+</div>
+                  <div className="QutShow">{props.QTY}</div>
+                  <div className="MutQut"
+                  onClick={() => {
+                    dispatch(changeDays(props));
+                  }}
+                  >-</div>
+                </div>
+                <div className="Total MT">{props.Price * props.QTY}</div>
+                <div className="Del MT"
+                onClick={() => {
+                  dispatch(removeBooking(props))
+                }}
+                >X</div>
+              </div>
+                ))
+              }
+          </div>
+
+          <div className="Subtotal">
+              <div className="SubTotals">
+                <h3>SubTotals</h3>
+                <span className="ProductInfo spanT">&#8358; {totalCostState}</span>
+              </div>
+              <div className="SubTotals">
+                <h3>Shipping to Lagos.</h3>
+                <span className="ProductInfo spanT">&#8358; 1000</span>
+              </div>
+
+              <div className="SubTotals">
+                <h3>Total</h3>
+                <span className="ProductInfo spanT">&#8358; {Sapping + totalCostState} </span>
               </div>
           </div>
+          <div className="Submit" onClick={() => hist('/paymentForm')}>Proceed to Payment</div>
         </article>
       </div>
+ :
+ <div className="CartList">
+     <article className="CartBody">
+      <div className="CartListHead"><p>No Item Added</p></div>
+     </article>
+ </div>
+  }
+
     </div>
   )
 }
