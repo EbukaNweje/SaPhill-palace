@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  addProduct,
+  // addProduct,
   addBooking,
   changeDays,
   removeBooking,
@@ -16,11 +16,11 @@ const Cart = () => {
   const totalCostState = useSelector(
     (state) => state.persisitedReducer.totalRoomCost
   );
-  const days = useSelector((state) => state.persisitedReducer.totalRoomDays);
+  // const days = useSelector((state) => state.persisitedReducer.totalRoomDays);
   const dispatch = useDispatch();
 
-  const [total, setTotal] = useState(totalCostState);
-  console.log("total", totalCostState);
+  // const [total, setTotal] = useState(totalCostState);
+  // console.log("total", totalCostState);
   console.log(data);
 
   let Sapping = 1000
@@ -50,7 +50,7 @@ const Cart = () => {
                 data.map((props)=>(
                   <div className="CartPoprs" key={props.id}>
                 <div className="Prd MT Pd MB">
-                    <div className="ProductImgCart"><img src={props.Image}/></div>
+                    <div className="ProductImgCart"><img src={props.Image} alt="ProductImage"/></div>
                     <span className="ProductInfo">{props.Name}</span>
                 </div>
                 <div className="Prc MT"><span className="ProductInfo">&#8358; {props.Price}</span></div>
