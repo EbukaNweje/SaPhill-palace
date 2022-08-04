@@ -27,7 +27,7 @@ const Cart = () => {
 
   useEffect(() => {
     dispatch(totalState());
-  }, [data]);
+  }, []);
   return (
     <div className="CartContainer">
         <div className="CartHeader">
