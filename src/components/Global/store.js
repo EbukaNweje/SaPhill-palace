@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { persistStore, persistReducer, PERSIST } from "redux-persist";
+import { persistReducer, PERSIST } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import myReducer from "./ProductState";
 
