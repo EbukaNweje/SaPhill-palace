@@ -172,4 +172,31 @@
   .CartHeader h2 {
     font-size: 30px;
   }
+
+  .Desk {
+    display: none;
+  }
+
+  .MobileQ {
+    display: flex;
+    text-align: center;
+  }
+
+  .BookingWrapper {
+    padding-top: 15px;
+  }
+
+  .BookingWrapperArticle {
+    flex-direction: column;
+  }
+
+  .BookingWrapperleft {
+    width: 100%;
+    padding: 0;
+  }
+
+  .BookingWrapperRight {
+    width: 100%;
+    padding: 0;
+  }
 }

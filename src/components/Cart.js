@@ -41,7 +41,7 @@ const Cart = () => {
           <div className="CartListHead">
             <div className="Prd"><h5>	PRODUCT</h5></div>
             <div className="Prc"><h5>PRICE</h5></div>
-            <div className="Qutt"><h5>QUANTITY</h5></div>
+            <div className="Qutt"><h5 className="Desk">QUANTITY</h5> <h5 className="MobileQ">QTY</h5></div>
             <div className="Total"><h5>TOTAL</h5></div>
           </div>
 
