@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "../Css/style.css"
 import "../Css/mobile.css"
-import { AiOutlineClose, AiOutlineHeart, AiOutlineShoppingCart, AiOutlineMenu, AiOutlineSearch } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineShoppingCart, AiOutlineMenu, AiOutlineSearch } from 'react-icons/ai';
 import { HiOutlineUser } from 'react-icons/hi';
 import Logo from "../asset/Logo.png"
 import Mobile from './Mobile';

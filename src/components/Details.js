@@ -20,7 +20,7 @@ const myValue = data[id - 1];
             </div>
             
             <div className='DetailsWrapperArticle_2'> 
-                <div className='DetailsWrapperArticle_2Left'> <img src={myValue.Image} alt='Product Image'/> </div>
+                <div className='DetailsWrapperArticle_2Left'> <img src={myValue.Image} alt='ProductImg'/> </div>
                 <div className='DetailsWrapperArticle_2Right'> 
                     <div className='DetailsWrapperArticle_2Right_1'> 
                         <div className='DetailsWrapperArticle_2Right_1_In'> 

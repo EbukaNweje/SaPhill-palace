@@ -4,17 +4,15 @@ import "../Css/mobile.css"
 import PaymentIMG from "../asset/paystack-wc.png"
 
 const Booking = () => {
-  const [firstName, setFirstName] = useState()
-  const [lastName, setLasttName] = useState()
-  const [companyName, setCompanyName] = useState()
-  const [country, setCountry] = useState()
-  const [address, setAddress] = useState()
-  const [town, setTown] = useState()
-  const [state, setState] = useState()
-  const [phone, setPhone] = useState()
-  const [email, setEmail] = useState()
-
-
+  // const [firstName, setFirstName] = useState()
+  // const [lastName, setLasttName] = useState()
+  // const [companyName, setCompanyName] = useState()
+  // const [country, setCountry] = useState()
+  // const [address, setAddress] = useState()
+  // const [town, setTown] = useState()
+  // const [state, setState] = useState()
+  // const [phone, setPhone] = useState()
+  // const [email, setEmail] = useState()
 
   return (
     <div className='BookingWrapper'>
