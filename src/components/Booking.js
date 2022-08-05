@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "../Css/style.css"
 import "../Css/mobile.css"
 import PaymentIMG from "../asset/paystack-wc.png"
