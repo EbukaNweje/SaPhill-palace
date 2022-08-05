@@ -1,6 +1,7 @@
 import React from 'react'
 import "../Css/style.css"
 import "../Css/mobile.css"
+import PaymentIMG from "../asset/paystack-wc.png"
 
 const Booking = () => {
   return (
@@ -82,13 +83,40 @@ const Booking = () => {
             </div>
 
             <div className='BookingWrapperRightInfo_3'>
-              <div>
-                
+              <div className='BookingWrapperRightInfo_3_1'>
+                <h4> Shipping </h4>
+              </div>
+              <div className='BookingWrapperRightInfo_3_2'>
+                <h5> Flat rate: </h5>
+                <h5> ₦1,000.00 </h5>
               </div>
             </div>
 
-            <div></div>
-            <div></div>
+            <div className='BookingWrapperRightInfo_4'>
+              <h3> Total </h3>
+              <h3 className='BookingWrapperRightInfo_4_color'> ₦210,500.00 </h3>
+            </div>
+
+            <div className='BookingWrapperRightInfo_5'>
+              <div className='BookingWrapperRightInfo_5_1'> 
+                <h6> Debit/Credit Cards </h6>
+                <div className='BookingWrapperRightInfo_5_1_In'> 
+                  <input type='radio' name='RadioChk'/>
+                  <img src={PaymentIMG} alt="PaymentIMGs"/>
+                </div>
+                <span> Make payment using your debit and credit cards </span>
+              </div>
+
+              <div className='BookingWrapperRightInfo_5_2'> 
+                <div className='BookingWrapperRightInfo_5_2_In'> 
+                  <input type='radio' name='RadioChk'/>
+                  <h6> Cash on delivery </h6>
+                </div>
+                <span> Pay with cash upon delivery. </span>  
+              </div>
+
+
+            </div>
           </div>
 
           <div className='BookingWrapperRightAgree'>

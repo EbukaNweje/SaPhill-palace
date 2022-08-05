@@ -159,7 +159,7 @@
 
   .ProductImgCart {
     width: 80%;
-  } 
+  }
 
   .Total {
     margin-left: 6px;
@@ -198,5 +198,17 @@
   .BookingWrapperRight {
     width: 100%;
     padding: 0;
+  }
+
+  .BookingWrapperRightInfo_5_1 span {
+    font-size: 13px;
+  }
+
+  .BookingWrapperRightInfo_5_2 span {
+    font-size: 13px;
+  }
+
+  .BookingWrapperRightAgree label {
+    font-size: 11px;
   }
 }
