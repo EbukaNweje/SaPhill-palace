@@ -9,7 +9,7 @@ import Index from './components/Index';
 import Footer from './components/Footer';
 import Cart from './components/Cart';
 import Booking from './components/Booking';
-
+import Details from './components/Details';
 
 
 const App = () => {
@@ -20,6 +20,7 @@ const App = () => {
       <Route path="/" element={<Index />}/>
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/paymentForm' element={<Booking/>}/>
+      <Route path='/Details/:id' element={<Details/>}/>
     </Routes>
     <Footer/>
   </BrowserRouter>

@@ -4,10 +4,13 @@ import "../Css/style.css"
 import "../Css/mobile.css"
 import { useDispatch } from "react-redux";
 import { addBooking, addProduct } from "./Global/ProductState";
-import {  AiOutlineHeart, AiOutlineShoppingCart,  } from 'react-icons/ai';
+import {  AiOutlineShoppingCart  } from 'react-icons/ai';
+import { FaRegEye } from 'react-icons/fa';
 import NewData from "../components/NewData.json"
+import { useNavigate } from "react-router-dom";
 
 const SaPhillJewelries = () => {
+  const hist = useNavigate();
   const dispatch = useDispatch();
   dispatch(addProduct(NewData));
     const [isDesktop, setDesktop] = useState(window.innerWidth > 1450);
@@ -52,7 +55,7 @@ const SaPhillJewelries = () => {
            <p className='ProductPriceDic'>&#8358; {props.DicPrice} </p>
            <div className='AddButton'>
              <AiOutlineShoppingCart className='IconC' onClick={() => dispatch(addBooking(props))}/>
-             <AiOutlineHeart className='IconC'/>
+             <FaRegEye className='IconC' onClick={() => hist(`/Details/${props.id}`)}/>
            </div>
          </div>
         ))

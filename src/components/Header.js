@@ -43,10 +43,10 @@ const Header = () => {
                 <AiOutlineSearch className='Sicon'/>
             </article>
             <div className='HeaderIcon'>
-                <div className='IconAdd'>
+                {/* <div className='IconAdd'>
                     <AiOutlineHeart className='Icons'/>
                     <span className='NumAdd'>0</span>
-                </div>
+                </div> */}
                 <div className='IconAdd'>
                    <AiOutlineShoppingCart className='Icons' onClick={() => hist('/cart')}/>
                     <span className='NumAdd'>{cart.length}</span>

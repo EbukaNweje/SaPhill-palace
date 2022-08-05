@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react'
 import Slider from "react-slick";
 import "../Css/style.css"
 import "../Css/mobile.css"
-import {  AiOutlineHeart, AiOutlineShoppingCart,  } from 'react-icons/ai';
+import { AiOutlineShoppingCart  } from 'react-icons/ai';
+import { FaRegEye } from 'react-icons/fa';
 import NewData from "../components/NewData.json"
 import { useDispatch } from "react-redux";
 import { addBooking, addProduct } from "./Global/ProductState";
+import { useNavigate } from "react-router-dom";
 
 const NewProduct = () => {
+  const hist = useNavigate();
   const dispatch = useDispatch();
   dispatch(addProduct(NewData));
 
@@ -54,7 +57,7 @@ return (
              <p className='ProductPriceDic'>&#8358; {props.DicPrice} </p>
              <div className='AddButton'>
                <AiOutlineShoppingCart className='IconC' onClick={() => dispatch(addBooking(props))}/>
-               <AiOutlineHeart className='IconC'/>
+               <FaRegEye className='IconC' onClick={() => hist(`/Details/${props.id}`)}/>
              </div>
            </div>
           ))
