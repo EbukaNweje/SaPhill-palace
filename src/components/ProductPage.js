@@ -2,7 +2,7 @@ import React from 'react'
 import datas from "../components/Cartigories.json"
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addProduct, addBooking } from "./Global/ProductState";
+import { addProduct } from "./Global/ProductState";
 import "../Css/style.css"
 import "../Css/mobile.css"
 import Menu from './Menu';
