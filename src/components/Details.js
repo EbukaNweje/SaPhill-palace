@@ -11,6 +11,7 @@ const { id } = useParams();
 const dispatch = useDispatch();
 dispatch(addProduct(data));
 const myValue = data[id - 1];
+// console.log(myValue)
   return (
     <div className='DetailsWrapper'>
         <div className='DetailsWrapperArticle'>

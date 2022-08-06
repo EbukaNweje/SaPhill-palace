@@ -2,51 +2,38 @@ import React from 'react'
 import "../Css/style.css"
 import "../Css/mobile.css"
 import {AiFillShop} from "react-icons/ai"
-import {MdOutlineWatch} from "react-icons/md"
-import {IoBagSharp} from "react-icons/io5"
+// import {MdOutlineWatch} from "react-icons/md"
+// import {IoBagSharp} from "react-icons/io5"
 import {SiMakerbot} from "react-icons/si"
-import {GiLoincloth, GiBallerinaShoes, GiHairStrands, GiSunglasses, GiApolloCapsule, GiJewelCrown, GiBeltArmor } 
-     from "react-icons/gi"
-
+// import {GiLoincloth, GiBallerinaShoes, GiHairStrands, GiSunglasses, GiApolloCapsule, GiJewelCrown, GiBeltArmor } 
+//      from "react-icons/gi"
+import Cartigories from "../components/Cartigories.json"
+import { Link } from "react-router-dom";
 const Mobile = ({setToggle, toggle}) => {
+  // const hist = useNavigate();
     console.log(toggle)
   return (
     <div className='MobileMenu'>
         <nav className='Nav'>
             <ul>
-                <li onClick={()=>{
-                setToggle()
-            }}> <AiFillShop className='Micon'/>Sell on SaPhill Palace</li>
-                <li onClick={()=>{
-                setToggle()
-            }}> <GiLoincloth className='Micon'/>SaPhill Clothes</li>
-                <li onClick={()=>{
-                setToggle()
-            }}> <GiBallerinaShoes className='Micon'/>SaPhill Shoes</li>
-                <li onClick={()=>{
-                setToggle()
-            }}><MdOutlineWatch className='Micon'/>SaPhill Watches</li>
-                <li onClick={()=>{
-                setToggle()
-            }}> <GiHairStrands className='Micon'/>SaPhill Hairs</li>
-                <li onClick={()=>{
-                setToggle()
-            }}> <SiMakerbot className='Micon'/>SaPhill Make-up</li>
-                <li onClick={()=>{
-                setToggle()
-            }}> <GiSunglasses className='Micon'/>SaPhill Glasses</li>
-                <li onClick={()=>{
-                setToggle()
-            }}> <IoBagSharp className='Micon'/>SaPhill Bags </li>
-                <li onClick={()=>{
-                setToggle()
-            }}> <GiApolloCapsule className='Micon'/> SaPhill Caps</li>
-                <li onClick={()=>{
-                setToggle()
-            }}> <GiJewelCrown className='Micon'/>SaPhill Jewelries</li>
-                <li onClick={()=>{
-                setToggle()
-            }}> <GiBeltArmor className='Micon'/>SaPhill Belt</li>
+                <li
+                onClick={()=>{
+                    setToggle()
+                }}
+                > <AiFillShop className='Micon'/>Sell on SaPhill Palace</li>
+                {
+                  Cartigories.map((Cartigories)=>(
+                    <ul className='UlI' key={Cartigories.id}>
+                    <Link to= {`/ProductPage/${Cartigories.id}/${Cartigories.CartigoriesName}`} className="Link">
+                    <li 
+                        onClick={()=> {
+                            setToggle()
+                        }}
+                    ><SiMakerbot className='Micon'/>{Cartigories.CartigoriesName}</li>
+                    </Link>
+                  </ul>
+                  ))
+                }
             </ul>
         </nav>
     </div>

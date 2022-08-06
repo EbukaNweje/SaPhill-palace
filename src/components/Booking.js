@@ -8,7 +8,7 @@ const Booking = () => {
   // const [lastName, setLasttName] = useState()
   // const [companyName, setCompanyName] = useState()
   // const [country, setCountry] = useState()
-  // const [address, setAddress] = useState()
+  // const [address, setAddress] =a useState()
   // const [town, setTown] = useState()
   // const [state, setState] = useState()
   // const [phone, setPhone] = useState()

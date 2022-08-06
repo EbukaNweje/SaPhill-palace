@@ -10,6 +10,8 @@ import Footer from './components/Footer';
 import Cart from './components/Cart';
 import Booking from './components/Booking';
 import Details from './components/Details';
+import ProductPage from './components/ProductPage';
+
 
 
 const App = () => {
@@ -21,6 +23,7 @@ const App = () => {
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/paymentForm' element={<Booking/>}/>
       <Route path='/Details/:id' element={<Details/>}/>
+      <Route path='/ProductPage/:id/:CartigoriesName' element={<ProductPage/>}/>
     </Routes>
     <Footer/>
   </BrowserRouter>

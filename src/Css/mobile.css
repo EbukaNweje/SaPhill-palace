@@ -105,6 +105,14 @@
     align-items: center;
   }
 
+  .UlI li {
+    list-style-type: none;
+    margin: 25px 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+  }
+
   .Micon {
     margin-right: 5px;
     font-size: 20px;
@@ -283,5 +291,22 @@
 
   .DetailsWrapperArticle_3 {
     margin-top: -90px;
+  }
+
+  .ProductPageIn2_1 {
+    display: none;
+  }
+
+  .ProductPageIn2_2 {
+    width: 100%;
+  }
+
+  .CartigoriesProductCard {
+    width: 70%;
+  }
+
+  .Link {
+    text-decoration: none;
+    color: white;
   }
 }
