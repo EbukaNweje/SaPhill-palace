@@ -4,7 +4,7 @@ h1 h2 h3 h4 h5 h6 p span a {
   font-family: "Inter", sans-serif;
 }
 
-.Header {
+/* .Header {
   width: 100%;
   height: 100px;
   background-color: #380000;
@@ -18,17 +18,18 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+} */
 
-.Logo {
+/* .Logo {
   width: 300px;
   display: flex;
   align-items: center;
   margin-left: 30px;
-}
+} */
 
-.Logo img {
-  width: 50px;
+/* .Logo img {
+  width: 80px;
+  cursor: pointer;
 }
 
 .Logo h3 {
@@ -36,9 +37,9 @@ header {
   color: white;
   text-transform: uppercase;
   cursor: pointer;
-}
+} */
 
-.Search {
+/* .Search {
   width: 450px;
   height: 50px;
   border-radius: 5px;
@@ -72,7 +73,6 @@ header {
 }
 
 .HeaderIcon {
-  /* width: 300px; */
   height: 40px;
   display: flex;
   align-items: center;
@@ -181,9 +181,9 @@ article {
 .Micon {
   margin-right: 10px;
   font-size: 20px;
-}
+} */
 
-.SliderDiv {
+/* .SliderDiv {
   width: 70%;
   height: 95%;
   margin-left: 50px;
@@ -194,7 +194,6 @@ article {
 .Sliders {
   width: 95%;
   height: 99%;
-  /* background: rgb(92, 2, 2); */
 }
 
 .Slid {
@@ -235,12 +234,10 @@ article {
   justify-content: center;
   color: black;
   margin-bottom: 30px;
-  /* background: red; */
 }
 
 .NewProductAll {
   display: block;
-  /* background: green; */
 }
 
 .NewProductHead {
@@ -272,7 +269,6 @@ article {
 }
 
 .NewPor {
-  /* background: blue; */
   width: 100%;
   height: 80%;
   display: flex;
@@ -282,7 +278,6 @@ article {
 .ProductSlider {
   width: 90%;
   height: 100%;
-  /* background: #000; */
 }
 
 .ProductSliderSlider {
@@ -297,7 +292,6 @@ article {
   margin-left: 10px;
   transition: all 0.1s ease;
   transform: scale(1);
-  /* border: 1px solid rgb(49, 49, 49); */
 }
 
 .NewPrudCard:hover {
@@ -407,7 +401,6 @@ p {
   display: flex;
   justify-content: center;
   color: black;
-  /* background: red; */
   margin-bottom: 20px;
 }
 
@@ -421,7 +414,6 @@ p {
 .TopFooter {
   width: 100%;
   height: 90%;
-  /* background: green; */
 }
 
 .CONTACT {
@@ -721,7 +713,6 @@ p {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  /* background-color: red; */
 }
 
 .BookingWrapperRightInfo_2_2 {
@@ -730,7 +721,6 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: red; */
 }
 
 .BookingWrapperRightInfo_3 {
@@ -775,7 +765,6 @@ p {
 .BookingWrapperRightInfo_5 {
   width: 100%;
   height: 250px;
-  /* background: #000; */
   padding-top: 20px;
 }
 
@@ -886,7 +875,6 @@ p {
   height: 350px;
   display: flex;
   justify-content: space-between;
-  /* background: #000; */
 }
 
 .DetailsWrapperArticle_2Left {
@@ -1062,7 +1050,6 @@ p {
   transition: all 0.1s ease;
   transform: scale(1);
   background-color: white;
-  /* border: 1px solid rgb(49, 49, 49); */
   display: flex;
   flex-direction: column;
 }
@@ -1102,4 +1089,4 @@ p {
 
 .PriceAdd p {
   margin-left: 20px;
-}
+} */

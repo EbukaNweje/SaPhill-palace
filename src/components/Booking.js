@@ -1,18 +1,28 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import "../Css/style.css"
 import "../Css/mobile.css"
 import PaymentIMG from "../asset/paystack-wc.png"
+import { useDispatch, useSelector } from "react-redux";
+import {
+  // addProduct,
+  // addBooking,
+  // changeDays,
+  // removeBooking,
+  totalState,
+} from "./Global/ProductState";
 
 const Booking = () => {
-  // const [firstName, setFirstName] = useState()
-  // const [lastName, setLasttName] = useState()
-  // const [companyName, setCompanyName] = useState()
-  // const [country, setCountry] = useState()
-  // const [address, setAddress] =a useState()
-  // const [town, setTown] = useState()
-  // const [state, setState] = useState()
-  // const [phone, setPhone] = useState()
-  // const [email, setEmail] = useState()
+  const data = useSelector((state) => state.persisitedReducer.bookings);
+  const dispatch = useDispatch();
+  const totalCostState = useSelector(
+    (state) => state.persisitedReducer.totalRoomCost
+  );
+  console.log(data)
+
+  
+  useEffect(() => {
+    dispatch(totalState());
+  }, [dispatch, data]);
 
   return (
     <div className='BookingWrapper'>
@@ -76,19 +86,19 @@ const Booking = () => {
               <h4> SUBTOTAL</h4>
             </div>
             <div className='BookingWrapperRightInfo_2'>
-              <div className='BookingWrapperRightInfo_2_1'> 
-                <h6> REDMI NOTE 10S 6GB/128GB  × 1 </h6>
-                <h6> ₦134,500.00 </h6>
-              </div>
 
-              <div className='BookingWrapperRightInfo_2_1'> 
-                <h6> REDMI NOTE 10S 6GB/128GB  × 1 </h6>
-                <h6> ₦134,500.00 </h6>
-              </div>
+              {
+                data.map((OrderP)=>(
+                   <div className='BookingWrapperRightInfo_2_1'> 
+                      <h6> {OrderP.Name}  × {OrderP.QTY} </h6>
+                      <h6>{OrderP.Price * OrderP.QTY} </h6>
+                    </div> 
+                ))
+              }
 
               <div className='BookingWrapperRightInfo_2_2'> 
                 <h4> Subtotal </h4>
-                <h4> ₦209,500.00 </h4>
+                <h4> ₦ {totalCostState} </h4>
               </div>
             </div>
 
@@ -104,7 +114,7 @@ const Booking = () => {
 
             <div className='BookingWrapperRightInfo_4'>
               <h3> Total </h3>
-              <h3 className='BookingWrapperRightInfo_4_color'> ₦210,500.00 </h3>
+              <h3 className='BookingWrapperRightInfo_4_color'> ₦ {totalCostState + 1000} </h3>
             </div>
 
             <div className='BookingWrapperRightInfo_5'>

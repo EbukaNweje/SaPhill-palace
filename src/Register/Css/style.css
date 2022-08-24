@@ -1,0 +1,177 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.Registercont {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    /* overflow-x: hidden; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(165, 164, 164, 0.116);
+}
+
+.RegisterDiv {
+    width: 80%;
+    height: 20%;
+    padding: 20px;
+}
+
+.Registercard2 {
+    background-color: #fff;
+    padding: 40px 20px;
+    width: 45%;
+    /* margin-left: -20px; */
+    border-radius: 5px;
+}
+
+.RegisterText {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.RegisterLog {
+    font-size: 30px;
+    font-weight: 600;
+    width: max-content;
+    border: none;
+    cursor: pointer;
+    margin: 15px;
+    background: none;
+    color: black;
+}
+
+
+
+
+.RegisterReg{
+    font-size: 30px;
+    font-weight: 600;
+    color: gray;
+    width: max-content;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+
+
+
+
+.Registercard {
+   width: 45%;
+   height: max-content;
+   padding: 40px 20px;
+   font-size: 14px;
+   /* margin-top: 30px; */
+   border-radius: 5px;
+   background-color: #fff;
+}
+
+
+
+.RegisterAcct {
+    width: 100%;
+    font-size: 17px;
+    margin-bottom: 1opx;
+}
+
+.RegistercardInput {
+    width: 100%;
+    height: 80%;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.RegisterInput {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid rgb(226, 222, 222);
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+.Registerbtn {
+    width: 100%;
+    height: 50px;
+    color: black;
+    margin: 15px 0px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(250, 214, 11);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Registerbtn2 {
+    width: 100%;
+    box-sizing: border-box;
+    height: 50px;
+    color: black;
+    margin: 15px 0px;
+    margin-right: 17px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(247, 207, 9, 0.863);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Registercheck {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.Registercheck p {
+  width: 50%;
+}
+
+.RegisterArt {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.RegisterArt div {
+    width: max-content;
+    display: flex;
+    cursor: pointer;
+}
+
+.reglink a {
+    text-decoration: none;
+}
+
+.reglink a:hover {
+    color: orange;
+}
+
+
+@media(max-width:991px){
+    .Registercard {
+        width: 85%;
+    }
+  .Registercard2 {
+      width: 90%;
+  }
+    }

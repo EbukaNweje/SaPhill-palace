@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap");
 
 @media (max-width: 900px) {
   .Header {
@@ -86,7 +86,6 @@
     display: flex;
     width: 70%;
     height: 80vh;
-    /* background: #000; */
     color: white;
     display: flex;
     flex-direction: column;
@@ -309,4 +308,4 @@
     text-decoration: none;
     color: white;
   }
-}
+} */

@@ -1,0 +1,1058 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.MainHeadder {
+  display: block;
+}
+
+.Header {
+  width: 100%;
+  height: 120px;
+  background: #022335;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+
+.HeaderWrapper {
+  width: 85%;
+  height: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Logo {
+  height: 120%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fcb800;
+  font-size: 25px;
+  font-weight: 700;
+  border-bottom: #fcb800 2px solid;
+  cursor: pointer;
+}
+
+.Logo img {
+  width: 100px;
+}
+
+.SearchDiv {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SearchDivInner {
+  height: 60%;
+  width: 80%;
+  background-color: #ffffff;
+  display: flex;
+  border-radius: 5px;
+  /* padding: 5px; */
+}
+
+.AllList {
+  height: 100%;
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid lightgray;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.AllList2 {
+  display: none;
+}
+
+.SearchDivInner input {
+  height: 100%;
+  width: 70%;
+  border: none;
+  outline: none;
+  padding-left: 20px;
+}
+
+.SearchDivInner button {
+  height: 100%;
+  width: 20%;
+  border: none;
+  background-color: #fcb800;
+  color: black;
+  border-radius: 0 5px 5px 0;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.MenuDiv {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.MenuDiv h2 {
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.UserAccount {
+  display: none;
+}
+
+.MenuDiv ul {
+  height: 50%;
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.MenuDiv ul ul {
+  flex-direction: column;
+}
+
+.MenuDiv ul li {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.8px;
+  cursor: pointer;
+  color: white;
+}
+
+.HomePage {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  padding: 40px 10px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.HomePageWrapper {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Categories {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.CategoriesDiv {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.87);
+  cursor: pointer;
+}
+
+.CategoriesDiv:hover {
+  transition: all 300ms;
+  background-color: #022335;
+  color: white;
+}
+
+.CategoriesDiv h4 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  margin-left: 20px;
+  word-spacing: 0.6px;
+}
+
+.HomePageLeft {
+  width: 23%;
+}
+
+.HomePageRight {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.HomePageRightImg {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.HomePageRightImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.ProductsPage {
+  width: 100%;
+  height: 100vh;
+  background-color: #e8e9eb;
+  display: flex;
+  justify-content: center;
+  padding: 40px 10px;
+}
+
+.ProductsPageWrapper {
+  width: 85%;
+  height: 100%;
+  display: flex;
+}
+
+.ProductsPageLeft {
+  width: 23%;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.ProductsPageLeftTop {
+  width: 100%;
+  height: 85%;
+}
+
+.ProductsPageLeftTop h3 {
+  height: 15%;
+  width: 60%;
+  font-size: 24px;
+  font-weight: 600px;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+
+.ProductsPageLeftTop ul {
+  width: 100%;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ProductsPageLeftTop ul li {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400px;
+  line-height: 15.4px;
+}
+
+.ProductsPageLeft span {
+  width: 100%;
+  height: auto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22.4px;
+  cursor: pointer;
+}
+
+.ProductsPageMid {
+  width: 20%;
+  height: 100%;
+  background-color: white;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.ProductsPageMid img {
+  width: 100%;
+  height: 100%;
+}
+
+.ProductsPageRight {
+  width: 57%;
+  height: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  background-color: white;
+}
+
+.ProductsPageRightCard {
+  width: 25%;
+  height: 50%;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.452);
+  cursor: pointer;
+}
+
+.ProductsPageRightCard:hover > .ProductCardImgDiv {
+  transition: all 350ms;
+  height: 40%;
+}
+
+.ProductCardImgDiv {
+  width: 100%;
+  height: 60%;
+}
+
+.ProductCardImgDiv img {
+  width: 100%;
+  height: 100%;
+}
+
+.ProductCardDetails {
+  display: none;
+  width: 100%;
+  height: 50px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ProductsPageRightCard:hover > .ProductCardDetails {
+  transition: all 350ms;
+  display: flex;
+}
+
+.ProductsPageRightCard h3 {
+  width: 100%;
+  height: 20%;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18.2px;
+  display: flex;
+  align-items: center;
+  color: #013551;
+}
+
+.ProductsPageRightCard h5 {
+  width: 100%;
+  height: 10%;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  color: rgb(255, 51, 0);
+  display: flex;
+  align-items: center;
+}
+
+.ProductsPageRightCard h6 {
+  width: 100%;
+  height: 10%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: rgb(153, 153, 153);
+  display: flex;
+  align-items: center;
+  text-decoration: line-through;
+}
+
+.IconAdd {
+  width: 60px;
+  position: relative;
+}
+
+.Icons {
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+}
+
+.NumAdd {
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffd703;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+  right: 25px;
+  font-size: 12px;
+}
+
+.NewProducts {
+  width: 100%;
+  height: max-content;
+}
+
+.IconC {
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+.CartContainer {
+  width: 100%;
+  min-height: 100vh;
+  background: white;
+}
+
+.CartHeader {
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CartHeader h2 {
+  font-size: 30px;
+}
+
+.CartList {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+}
+
+.CartBody {
+  width: 90%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.CartListHead {
+  width: 100%;
+  background-color: #e3e3e3;
+  display: flex;
+  padding: 20px;
+}
+
+.Prd {
+  width: 40%;
+}
+
+.Prc {
+  width: 20%;
+  text-align: center;
+}
+
+.Qutt {
+  width: 20%;
+  text-align: center;
+}
+
+.Total {
+  width: 15%;
+}
+
+.MT {
+  margin-top: 20px;
+}
+
+.Del {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.Pd {
+  display: flex;
+}
+
+.CartPropsBody {
+  width: 100%;
+  height: max-content;
+}
+
+.CartPoprs {
+  width: 100%;
+  height: 25vh;
+  border-bottom: 1px solid #e3e3e3;
+  display: flex;
+}
+
+.ProductImgCart {
+  width: 20%;
+  height: 90%;
+  background: #000;
+}
+
+.ProductImgCart img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ProductInfo {
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.Quut {
+  display: flex;
+  justify-content: space-around;
+}
+
+.AddQut {
+  width: 50px;
+  height: 25px;
+  background: rgb(1, 54, 1);
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.MutQut {
+  width: 50px;
+  height: 25px;
+  background: rgb(75, 1, 1);
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.Subtotal {
+  width: 100%;
+  height: 50vh;
+  background-color: #e3e3e3;
+  margin-top: 20px;
+}
+
+.SubTotals {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 30%;
+  border-bottom: 1px solid ghostwhite;
+  align-items: center;
+}
+
+.SubTotals h3,
+.spanT {
+  margin: 0px 30px;
+}
+
+.Submit {
+  width: 100%;
+  height: 8vh;
+  background-color: #fcb800;
+  color: black;
+  margin: 20px 0px;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.MobileQ {
+  display: none;
+}
+
+.DetailsWrapper {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.DetailsWrapperArticle {
+  width: 90%;
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+}
+
+.DetailsWrapperArticle_1 {
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.DetailsWrapperArticle_2 {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.DetailsWrapperArticle_2Left {
+  width: 40%;
+  height: 100%;
+  background: #000;
+  object-fit: cover;
+}
+
+.DetailsWrapperArticle_2Left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.DetailsWrapperArticle_2Right {
+  width: 55%;
+  height: 100%;
+}
+
+.DetailsWrapperArticle_2Right_1 {
+  width: 100%;
+  height: 20%;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.DetailsWrapperArticle_2Right_1_In {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.DetailsWrapperArticle_2Right_1_In h3 {
+  font-size: 25px;
+  color: red;
+}
+
+.DetailsWrapperArticle_2Right_1_In h5 {
+  font-size: 18px;
+  margin-left: 10px;
+  text-decoration: line-through;
+}
+
+.DetailsWrapperArticle_2Right_1_In span {
+  font-size: 18px;
+  margin-left: 10px;
+  color: red;
+}
+
+.DetailsWrapperArticle_2Right_1_In h4 {
+  font-size: 18px;
+}
+
+.DetailsWrapperArticle_2Right_1_In p {
+  font-size: 18px;
+  color: green;
+  margin-left: 10px;
+}
+
+.DetailsWrapperArticle_2Right_1 button {
+  width: 30%;
+  height: 70%;
+  background-color: green;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+}
+
+.DetailsWrapperArticle_3 {
+  width: 100%;
+  height: max-content;
+}
+
+.DetailsWrapperArticle_3In1 {
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 10px;
+}
+
+.DetailsWrapperArticle_3In2 {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.DetailsWrapperArticle_3In2 h4 {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.DetailsWrapperArticle_3In2 p {
+  width: 100%;
+  height: 100px;
+  font-size: 15px;
+}
+
+.BookingWrapper {
+  width: 100%;
+  height: max-content;
+  padding-top: 100px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  background: white;
+}
+
+.BookingWrapperArticle {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.BookingWrapperleft {
+  width: 55%;
+  height: 100%;
+  padding: 20px;
+}
+
+.BookingWrapperleft h2 {
+  width: 100%;
+  height: 80px;
+}
+
+.BookingWrapperLeftInfo {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.BookingWrapperLeftInfo > label {
+  width: 100%;
+  height: 30%;
+}
+
+.BookingWrapperLeftInfo > label > span {
+  color: red;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.BookingWrapperLeftInfo > input {
+  width: 95%;
+  height: 70%;
+  outline: none;
+  padding-left: 20px;
+  border: 1px solid lightgray;
+  background-color: none;
+}
+
+.BookingWrapperRight {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.BookingWrapperRight h2 {
+  width: 100%;
+  height: 80px;
+}
+
+.BookingWrapperRightInfo {
+  height: max-content;
+  width: 100%;
+  background-color: #efefef;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.BookingWrapperRightInfo_1 {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 10px;
+}
+
+.BookingWrapperRightInfo_2 {
+  width: 100%;
+  height: max-content;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 10px;
+}
+
+.BookingWrapperRightInfo_2_1 {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.BookingWrapperRightInfo_2_2 {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.BookingWrapperRightInfo_3 {
+  width: 100%;
+  height: 90px;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.BookingWrapperRightInfo_3_1 {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.BookingWrapperRightInfo_3_2 {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.BookingWrapperRightInfo_4 {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+
+.BookingWrapperRightInfo_4_color {
+  color: red;
+}
+
+.BookingWrapperRightInfo_5 {
+  width: 100%;
+  height: 250px;
+  padding-top: 20px;
+}
+
+.BookingWrapperRightInfo_5_1 {
+  width: 100%;
+  height: 170px;
+  margin-bottom: 5px;
+}
+
+.BookingWrapperRightInfo_5_1_In {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  object-fit: cover;
+}
+
+.BookingWrapperRightInfo_5_1_In img {
+  width: 80%;
+  height: 90%;
+  margin-left: 20px;
+}
+
+.BookingWrapperRightInfo_5_2 {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.BookingWrapperRightInfo_5_2_In {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.BookingWrapperRightInfo_5_2_In h6 {
+  margin-left: 20px;
+}
+
+.BookingWrapperRightAgree {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.BookingWrapperRightAgree input {
+  width: 20px;
+  height: 20px;
+}
+
+.BookingWrapperRightAgree label {
+  margin-left: 20px;
+  font-size: 15px;
+}
+
+.BookingWrapperRightAgree label span {
+  color: red;
+  font-weight: bold;
+}
+
+.BookingWrapperRightOrder {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fcb800;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ProductPageWrapper {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.ProductPageWrapper article {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ProductPageWrapper article h2 {
+  margin-bottom: 20px;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.ProductPageIn2 {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ProductPageIn2_1 {
+  width: 25%;
+  height: 450px;
+  background-color: white;
+}
+
+.ProductPageIn2_2 {
+  width: 70%;
+  height: max-content;
+}
+
+.ProductPageIn2_2 h3 {
+  width: 100%;
+  height: 50px;
+  background-color: #dbd7d7;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+.CartigoriesProductMain {
+  height: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.CartigoriesProductCard {
+  width: 25%;
+  height: 300px;
+  margin: 20px 20px;
+  transition: all 0.1s ease;
+  transform: scale(1);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.CartigoriesProductCard:hover {
+  box-shadow: 3px 2px 10px -2px rgba(226, 225, 225, 0.126);
+  -webkit-box-shadow: 3px 2px 10px -2px rgba(168, 168, 168, 0.239);
+  -moz-box-shadow: 3px 2px 10px -2px rgba(241, 237, 237, 0.131);
+  transform: scale(1.02);
+}
+
+.CartigoriesProductCard img {
+  height: 70%;
+  width: 100%;
+  background: black;
+}
+
+.CartigoriesProductCard h3 {
+  width: 100%;
+  height: 30px;
+  padding: 0;
+  background-color: white;
+  display: flex;
+  padding-left: 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+  margin: 0;
+}
+
+.PriceAdd {
+  display: flex;
+}
+
+.PriceAdd span {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}

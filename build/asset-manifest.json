@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.3e631817.css",
-    "main.js": "/static/js/main.8fdb5b7e.js",
+    "main.css": "/static/css/main.15540d9f.css",
+    "main.js": "/static/js/main.99caa465.js",
     "static/js/787.5639fac3.chunk.js": "/static/js/787.5639fac3.chunk.js",
-    "static/media/1.jpg": "/static/media/1.0fabbedea69c533cd4ef.jpg",
-    "static/media/Logo.png": "/static/media/Logo.db74d3bd7e2a884b8b18.png",
+    "static/media/cat9.jpg": "/static/media/cat9.fc0ae44057bf3c45e95c.jpg",
+    "static/media/cat8.jpg": "/static/media/cat8.2c01db430080210a87a9.jpg",
+    "static/media/cat10.jpg": "/static/media/cat10.395a8359a4fa10810e2b.jpg",
+    "static/media/home2.jpg": "/static/media/home2.564da552d72e04be326c.jpg",
+    "static/media/cat1.jpg": "/static/media/cat1.e1d49503f944a2087ca9.jpg",
+    "static/media/home1.jpg": "/static/media/home1.c685e55f2007a07e93f1.jpg",
+    "static/media/SaPhill Palace2.png": "/static/media/SaPhill Palace2.0666153fd9cf8496226d.png",
     "static/media/paystack-wc.png": "/static/media/paystack-wc.11f8018a97a060f96d35.png",
-    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.3e631817.css.map": "/static/css/main.3e631817.css.map",
-    "main.8fdb5b7e.js.map": "/static/js/main.8fdb5b7e.js.map",
+    "main.15540d9f.css.map": "/static/css/main.15540d9f.css.map",
+    "main.99caa465.js.map": "/static/js/main.99caa465.js.map",
     "787.5639fac3.chunk.js.map": "/static/js/787.5639fac3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3e631817.css",
-    "static/js/main.8fdb5b7e.js"
+    "static/css/main.15540d9f.css",
+    "static/js/main.99caa465.js"
   ]
 }

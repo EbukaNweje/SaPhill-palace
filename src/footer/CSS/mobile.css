@@ -1,0 +1,21 @@
+@media(max-width:991px) {
+    .footercont {
+        flex-direction: column;
+        height: 60vh;
+        padding: 40px 5px 80px 5px;
+        align-items: flex-start;
+    }
+
+    .footerDiv {
+        width: max-content;
+        height: 10%;
+    }
+
+    .Midfooterbody {
+        flex-direction: column;
+    }
+
+    .Bottomfootercont {
+        flex-direction: column;
+    }
+}

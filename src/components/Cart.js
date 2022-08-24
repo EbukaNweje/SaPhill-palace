@@ -8,6 +8,8 @@ import {
   totalState,
 } from "./Global/ProductState";
 import { useNavigate } from "react-router-dom";
+import "../Css/styleC.css"
+import "../Css/mobileC.css"
 
 
 const Cart = () => {
@@ -30,6 +32,7 @@ const Cart = () => {
   }, [dispatch, data]);
   return (
     <div className="CartContainer">
+        <div className="CartWrapper">
         <div className="CartHeader">
           <h2>Shopping Cart</h2>
         </div>
@@ -103,7 +106,7 @@ const Cart = () => {
      </article>
  </div>
   }
-
+        </div>
     </div>
   )
 }

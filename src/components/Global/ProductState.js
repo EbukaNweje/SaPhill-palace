@@ -1,8 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
+// import Axios from "axios"
 
 const initialState = {
   product: [],
   bookings: [],
+  AllCart: [],
+  LogId: "",
+  GetUser: []
   // totalRoomCost: 0,
 };
 
@@ -55,9 +59,26 @@ const ProductState = createSlice({
       state.totalRoomCost = totalCost;
       // state.totalRoomDays = totalDays;
     },
+
+    addId: (state, {payload}) =>{
+      state.LogId = payload
+      console.log(payload)
+  },
+  removeId: (state, {payload})=>{
+    state.LogId = ""
+  },
+  GetUser: (state, {payload})=>{
+    state.GetUser = payload
+    console.log(payload)
+  },
+  signOut: (state) => {
+    state.LogId = "";
+    state.GetUser = [];
+  },
+    
   },
 });
 
-export const { addBooking, addProduct, removeBooking, changeDays, totalState } =
+export const { addBooking, addProduct, removeBooking, changeDays, totalState, addId, removeId,GetUser, signOut} =
   ProductState.actions;
 export default ProductState.reducer;

@@ -1,93 +1,85 @@
 import React, { useState } from 'react'
-import "../Css/style.css"
-import "../Css/mobile.css"
-import { AiOutlineClose, AiOutlineShoppingCart, AiOutlineMenu, AiOutlineSearch } from 'react-icons/ai';
-import { HiOutlineUser } from 'react-icons/hi';
-import Logo from "../asset/Logo.png"
+import "../Css/styleC.css"
+import "../Css/mobileC.css"
+import Logo from "../asset/SaPhill Palace2.png"
+import { AiOutlineShoppingCart, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+import { HiOutlineUser } from 'react-icons/hi'
 import Mobile from './Mobile';
-// import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { signOut } from "../components/Global/ProductState"
 import { useNavigate  } from "react-router-dom"
 
 
+
 const Header = () => {
-    const hist = useNavigate();
-    const cart = useSelector((state) => state.persisitedReducer.bookings);
-    const [toggle, setToggle] = useState(false)
+  const hist = useNavigate();
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.persisitedReducer.bookings);
+  const id = JSON.parse(localStorage.getItem("User"))
+  // console.log(id.message)
+  
+  const [toggle, setToggle] = useState(false)
     const onToggle = () => {
         setToggle(!toggle)
     }
 
+    // useEffect(() => {
+    //   dispatch(addId());
+    //   console.log("My id is",addId())
+    // }, [dispatch]);
+
   return (
+    <div className='MainHeadder'>
     <div className='Header'>
-        <header>
-            <div className='Logo'>
-                <img src={Logo} alt='Logo'/>
-                <h3  onClick={() => hist('/')}>SaPhill Palace</h3>
-            </div>
-            <article className='Search'>
-                <select>
-                    <option>All</option>
-                    <option>SaPhill Clothes</option>
-                    <option>SaPhill Shoes</option>
-                    <option>SaPhill Watches</option>
-                    <option>SaPhill Hairs</option>
-                    <option>SaPhill Make-up</option>
-                    <option>SaPhill Glasses</option>
-                    <option>SaPhill Bags</option>
-                    <option>SaPhill Belt</option>
-                    <option>SaPhill Jewelries</option>
-                    <option>SaPhill Caps</option>
-                </select>
-                <input type= "search" placeholder='what do you want to buy?'/>
-                <AiOutlineSearch className='Sicon'/>
-            </article>
-            <div className='HeaderIcon'>
-                {/* <div className='IconAdd'>
-                    <AiOutlineHeart className='Icons'/>
-                    <span className='NumAdd'>0</span>
-                </div> */}
-                <div className='IconAdd'>
-                   <AiOutlineShoppingCart className='Icons' onClick={() => hist('/cart')}/>
-                    <span className='NumAdd'>{cart.length}</span>
-                </div>
-                <div className='IconAdd Log'>
-                    <HiOutlineUser className='Icons'/>
-                    <h6>Log in Register</h6>
-                </div>
-            </div>
-        </header>
-            <div className='Mobile'>
-            {
+      <div className='HeaderWrapper'> 
+          <div className='Logo' onClick={() => hist('/')}><img src={Logo}  alt="Logo"/> SaPhill Palace</div>
+          <div className='SearchDiv'> 
+            <div className='SearchDivInner'>
+              <div className='AllList'> All </div>
+              <div className='AllList2'> 
+              {
                 toggle ? <AiOutlineClose className='Menu' 
                 onClick={()=>{
                     onToggle()
-                    // console.log(toggle)
                 }}
                  /> :
                 <AiOutlineMenu className='Menu' onClick={()=>{
                     onToggle()
-                    // console.log(toggle)
                 }}/>
             }
-            <article className='SearchM'>
-                <select>
-                    <option>All</option>
-                    <option>SaPhill Clothes</option>
-                    <option>SaPhill Shoes</option>
-                    <option>SaPhill Watches</option>
-                    <option>SaPhill Hairs</option>
-                    <option>SaPhill Make-up</option>
-                    <option>SaPhill Glasses</option>
-                    <option>SaPhill Bags</option>
-                    <option>SaPhill Belt</option>
-                    <option>SaPhill Jewelries</option>
-                    <option>SaPhill Caps</option>
-                </select>
-                <input type= "search" placeholder='what do you want to buy?'/>
-                <AiOutlineSearch className='SiconM'/>
-            </article>
-        </div>
+               </div>
+              <input type='text' placeholder='what do you whant to buy?'/>
+              <button> Search </button>
+            </div>
+          </div>
+          <div className='MenuDiv'> 
+          <div className='IconAdd'>
+                     <AiOutlineShoppingCart className='Icons' onClick={() => hist('/cart')}/>
+                   <span className='NumAdd'>{cart.length}</span>
+              </div>
+            <ul> 
+            {
+              !id ? <HiOutlineUser className='Icons' onClick={() => hist('/Registration')}/> :<HiOutlineUser className='Icons' onClick={() => hist('/')}/>
+            }
+               {
+                 !id?
+                <ul onClick={() => hist('/Registration')}>
+                <li> Log in </li> 
+                <li> Register </li> 
+                </ul>
+                : 
+                <ul onClick={() => hist('/')}>
+                  <li>{id.message}</li>
+                  <li onClick={()=>{
+                    localStorage.removeItem("User");
+                    dispatch(signOut())
+                  }}>Sign Out</li>
+                </ul>
+               }
+            </ul>
+          </div>
+      </div>
+    </div>
           { toggle ? ( 
             <Mobile toggle={toggle} setToggle={setToggle}/> 
           ): null }

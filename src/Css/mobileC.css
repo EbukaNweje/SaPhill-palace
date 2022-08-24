@@ -1,0 +1,280 @@
+@media (max-width: 999px) {
+  .Header {
+    height: 200px;
+  }
+
+  .HeaderWrapper {
+    height: 95%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .Logo {
+    width: 50%;
+    height: 50%;
+  }
+
+  .SearchDiv {
+    width: 100%;
+    height: 50%;
+    position: relative;
+  }
+
+  .AllList {
+    display: none;
+  }
+
+  .AllList2 {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid lightgray;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    background-color: none;
+    color: white;
+  }
+
+  .MenuDiv {
+    height: 50%;
+    width: 30%;
+    position: absolute;
+    right: 36px;
+    margin-left: 90%px;
+    display: flex;
+    align-items: center;
+  }
+
+  .UserAccount {
+    display: flex;
+    margin-right: 10px;
+  }
+
+  .SearchDivInner {
+    width: 100%;
+    height: 50%;
+    border-radius: 0;
+    background-color: #022335;
+  }
+
+  .SearchDiv button {
+    border-radius: 0;
+  }
+
+  .HomePageWrapper {
+    width: 95%;
+    position: relative;
+  }
+
+  .Categories {
+    display: none;
+  }
+
+  .HomePageRight {
+    width: 100%;
+  }
+
+  .ProductsPage {
+    height: max-content;
+  }
+
+  .ProductsPageWrapper {
+    width: 95%;
+  }
+
+  .ProductsPageLeft {
+    display: none;
+  }
+
+  .ProductsPageMid {
+    display: none;
+  }
+
+  .ProductsPageRight {
+    width: 100%;
+  }
+
+  .ProductsPageRightCard {
+    margin-top: 5px;
+    height: 300px;
+    width: 50%;
+  }
+
+  .MenuDiv ul ul {
+    display: none;
+  }
+
+  .Menu {
+    font-size: 30px;
+    color: white;
+  }
+
+  .MainHeadder {
+    position: relative;
+  }
+
+  .MobileMenu {
+    position: absolute;
+    display: flex;
+    width: 70%;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: #022335;
+    z-index: 10;
+  }
+
+  .ProductImgCart {
+    width: 80%;
+  }
+
+  .Total {
+    margin-left: 6px;
+  }
+
+  .CartPoprs {
+    height: max-content;
+  }
+
+  .CartHeader h2 {
+    font-size: 30px;
+  }
+
+  .MB {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .MobileQ {
+    display: flex;
+  }
+
+  .Desk {
+    display: none;
+  }
+
+  .DetailsWrapperArticle {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .DetailsWrapperArticle_2 {
+    height: 450px;
+    flex-direction: column;
+  }
+
+  .DetailsWrapperArticle_2Left {
+    width: 100%;
+    height: 35%;
+  }
+
+  .DetailsWrapperArticle_2Right {
+    width: 100%;
+    height: 60%;
+  }
+
+  .DetailsWrapperArticle_2Right_1 {
+    margin-bottom: 20px;
+  }
+
+  .DetailsWrapperArticle_2Right_1_In h3 {
+    font-size: 23px;
+    color: red;
+  }
+
+  .DetailsWrapperArticle_2Right_1_In h5 {
+    font-size: 17px;
+    margin-left: 10px;
+    text-decoration: line-through;
+  }
+
+  .DetailsWrapperArticle_2Right_1_In span {
+    font-size: 17px;
+    margin-left: 10px;
+    color: red;
+  }
+
+  .DetailsWrapperArticle_2Right_1_In h4 {
+    font-size: 16px;
+  }
+
+  .DetailsWrapperArticle_2Right_1_In p {
+    font-size: 16px;
+    color: green;
+    margin-left: 10px;
+  }
+
+  .DetailsWrapperArticle_2Right_1 h2 {
+    font-size: 15px;
+  }
+
+  .DetailsWrapperArticle_2Right_1 button {
+    width: 70%;
+    height: 70%;
+    background-color: green;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+  }
+
+  .DetailsWrapperArticle_3 {
+    margin-top: -90px;
+  }
+
+  .BookingWrapper {
+    padding-top: 15px;
+  }
+
+  .BookingWrapperArticle {
+    flex-direction: column;
+  }
+
+  .BookingWrapperleft {
+    width: 100%;
+    padding: 0;
+  }
+
+  .BookingWrapperRight {
+    width: 100%;
+    padding: 0;
+  }
+
+  .BookingWrapperRightInfo_5_1 span {
+    font-size: 13px;
+  }
+
+  .BookingWrapperRightInfo_5_2 span {
+    font-size: 13px;
+  }
+
+  .BookingWrapperRightAgree label {
+    font-size: 11px;
+  }
+
+  .ProductPageIn2_1 {
+    display: none;
+  }
+
+  .ProductPageIn2_2 {
+    width: 100%;
+  }
+
+  .CartigoriesProductCard {
+    width: 70%;
+  }
+
+  .Link {
+    color: white;
+  }
+}

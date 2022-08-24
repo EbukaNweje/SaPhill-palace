@@ -11,7 +11,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgba(241, 241, 241, 0.392);
+  background-image: url("./asset/bg02.jpg");
 }
 
 code {
