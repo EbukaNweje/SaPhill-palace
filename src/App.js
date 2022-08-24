@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Header from './components/Header'
 import {
   BrowserRouter,
   Routes,
   Route,
-  NavLink,
 } from "react-router-dom";
 import HomePage from "./components/HomePage"
 import Cart from './components/Cart';

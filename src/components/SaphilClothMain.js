@@ -18,7 +18,7 @@ const SaphilClothMain = () => {
         </div>
         
         <div className='ProductsPageMid'> 
-            <img src={ClothAda}/> 
+            <img src={ClothAda} alt="PImage"/> 
         </div>
         
         <div className='ProductsPageRight'> 

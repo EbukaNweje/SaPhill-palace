@@ -17,7 +17,7 @@ const SaphilShoeMain = () => {
             </div>
             
             <div className='ProductsPageMid'> 
-                <img src={shoeAda}/> 
+                <img src={shoeAda} alt="PImage"/> 
             </div>
             
             <div className='ProductsPageRight'> 

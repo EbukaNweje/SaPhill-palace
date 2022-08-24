@@ -17,7 +17,7 @@ const SaphilWatchMain = () => {
         </div>
         
         <div className='ProductsPageMid'> 
-            <img src={WatchAda}/> 
+            <img src={WatchAda} alt="PImage"/> 
         </div>
         
         <div className='ProductsPageRight'> 

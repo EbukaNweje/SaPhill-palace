@@ -17,7 +17,7 @@ const SaPhilHairsMain = () => {
             </div>
             
             <div className='ProductsPageMid'> 
-                <img src={hairAda}/> 
+                <img src={hairAda} alt="PImage"/> 
             </div>
             
             <div className='ProductsPageRight'> 

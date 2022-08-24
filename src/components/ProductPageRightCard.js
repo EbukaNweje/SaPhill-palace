@@ -23,7 +23,7 @@ const ProductPageRightCard = () => {
       Data.map((props)=>(
         <div className='ProductsPageRightCard' key={props.id}> 
         <div className='ProductCardImgDiv'> 
-            <img src={props.Image}/> 
+            <img src={props.Image} alt="PImage"/> 
         </div>
         <div className='ProductCardDetails'> 
             <h4> <AiOutlineShoppingCart className='IconC'  onClick={() => dispatch(addBooking(props))}/> </h4>

@@ -16,7 +16,7 @@ const ProductsPage = () => {
             </div>
             
             <div className='ProductsPageMid'> 
-                <img src='Assets/Images/phones-and-tablets.png'/> 
+                <img src='Assets/Images/phones-and-tablets.png' alt="PImage"/> 
             </div>
             
             <div className='ProductsPageRight'> 
