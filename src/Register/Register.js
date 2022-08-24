@@ -108,7 +108,7 @@ const urlL = "https://saphill-palace.herokuapp.com/user/login"
                     <input className='Registercheck' type="checkbox"/>
                     <p>Remember Me</p>
                     </div>
-                    <p className='reglink'><a href='#'>Forgot your password?</a></p>
+                    <p className='reglink'>Forgot your password?</p>
                     </article>
                     <button className='Registerbtn' onClick={()=> Login()}>Log in</button>
             </section>
