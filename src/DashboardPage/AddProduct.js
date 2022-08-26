@@ -7,38 +7,43 @@ import { useSelector } from "react-redux";
 const AddProduct = () => {
     const [cat, setCat] = useState([])
     const [image, setImage] = useState()
-    const [aveter, setAveter] = useState(image)
-    const [name, setName ] = useState("")
-    const [description, setDescription ] = useState("")
-    const [price, setPrice ] = useState("")
-    const [quantity, setQuantity ] = useState("")
-    // const [catIdValue, setCatIdValue] = useState("");
+    const [name, setName] = useState("")
+    const [price, setPrice] = useState(0)
+    const [quantity, setQuantity] = useState(0)
+    const [description, setDescription] = useState("")
+    // const [data, setData ] = useState({
+    //     name : "",
+    //     price : "",
+    //     quantity: "",
+    //     image: "",
+    //     description : ""
+    // })
+    const [catIdValue, setCatIdValue] = useState("");
     
-    // const id = useSelector((state) => state.persisitedReducer.LogId);
+    const id = useSelector((state) => state.persisitedReducer.LogId);
     const GetUser = useSelector((state) => state.persisitedReducer.GetUser);
     // console.log(GetUser.token)
     let token = GetUser.token
-    console.log(token)
+    // console.log(token)
 
     const catchId =(id)=>{
         // const show = id
-        // setCatIdValue(id)
+        setCatIdValue(id)
         // console.log(catIdValue);
         // console.log(id)
     }
 
     const UploadImage = (e) =>{
         const file = e.target.files[0];
-        let Myfile = file.name
+        // let Myfile = file.name
         const src = URL.createObjectURL(file);
         
         setImage(src)
-        setAveter(Myfile)
-        console.log(src)
+        // console.log(src)
         // const newdate = { ...data }
-        // newdate[e.target.value] = src
+        // newdate[e.target.value] = Myfile
         // setData(newdate)
-        // newdate.Image = src
+        // newdate.image = Myfile
         
         
         // console.log(newdate)
@@ -54,33 +59,35 @@ const AddProduct = () => {
     //     .then(res =>{setAdmin(res)})
     // }
 
-    //  const urlPost = `https://saphill-palace.herokuapp.com/user/add/${id}/${catIdValue}`
-     const urlPost = `https://saphill-palace.herokuapp.com/user/add/62eba239de0e72fbfc19edb0/62ebaabd314bed49450544fd`
+     const urlPost = `https://saphill-palace.herokuapp.com/user/add/${id}/${catIdValue}`
+    //  const urlPost = `https://saphill-palace.herokuapp.com/user/add/62eba239de0e72fbfc19edb0/62ebaabd314bed49450544fd`
     const addProduct = async (e)=>{
         e.preventDefault()
-        const fd = new FormData();
-        fd.append("name", name)
-        fd.append("description", description)
-        fd.append("price", price)
-        // fd.append("price", price)
-        fd.append("quantity", quantity)
-        fd.append("image", aveter)
+        try{
+            console.log(name, price, quantity, description, image, catIdValue, id)
 
-        console.log(fd)
+        const formData = new FormData();
+        formData.append("image", image)
+        formData.append("price", price);
+        formData.append("quantity", quantity);
+        formData.append("description", description);
+
         const verify = {
             headers: {
-                authorization :`Ebuka ${token}`
+                authorization :`Ebuka ${token}`,
                 // authorization :`Ebuka eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZWJhMjM5ZGUwZTcyZmJmYzE5ZWRiMCIsImVtYWlsIjoibGVra2lAZ21haWwuY29tIiwibmFtZSI6Ikxla2tpIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjYxMzYzODU2LCJleHAiOjE2NjE0NTAyNTZ9.dnVMye7sDO6_pnP1ELFSQEUYl1GUDkzBuD-w6xehMMI`
-            }
+            },
         }
         const config = {
            headers: {
-            "content-type": "multipart/form-data"
-           }
+            "content-type": "multipart/form-data",
+           },
         }
-        // console.log("this is",aveter)
-        await Axios.post(urlPost, fd, config, verify,)
-        .then(res=>{ console.log(res)}).catch((err)=> console.log(err))
+        await Axios.post(urlPost, formData , verify, config)
+        }catch(err){
+            console.log(err)
+        }
+
     }
     const newcat = {...cat.data}
     const dataCat = Object.values(newcat)
@@ -107,6 +114,7 @@ const AddProduct = () => {
 
 useEffect(()=>{
     GetCat()
+    // console.log(id)
     // GetAdmin()
 },[])
 
@@ -117,42 +125,34 @@ useEffect(()=>{
 
         <div className='AddProduct1'> 
             <h6> Product Name</h6>
-            <input type='text' value={name}
-                onChange={(e) => {setName(e.target.value); console.log(name)}}/> 
+            <input type='text'  onChange={(e)=> setName(e.target.value) } id="name" value={name}/> 
         </div>
 
         <div className='AddProduct2'>
             <div className='AddProduct2In'> 
                 <h6> Price </h6>
-                <input type='text'  id="ProductPrice" 
-                value={price}
-                onChange={(e) => {setPrice(e.target.value); console.log(price)}}
-                />
+                <input type='text' onChange={(e)=> setPrice(e.target.value) } id="price" value={price} /> 
             </div>
 
             <div className='AddProduct2In'> 
                 <h6> Stock </h6>
-                <input type='text' id="ProductStock" 
-                    value={quantity}
-                    onChange={(e) => {setQuantity(e.target.value); console.log(quantity)}}
-                />
+                <input type='text' onChange={(e)=> setQuantity(e.target.value) } id="quantity" value={quantity}/>
             </div>
         </div>
 
         <div className='AddProduct3'>
             <h6> Description </h6>
-            <textarea  id="ProductDescription"  
-                value={description}
-                onChange={(e) => {setDescription(e.target.value); console.log(description)}}
-            />
+            <textarea  onChange={(e)=> setDescription(e.target.value) } id="description" value={description}/>
         </div>
 
         <div className='AddProduct4'> 
             <div className='ImgShow'> 
                 <img src={image} alt='produtimage'/>
              </div>
-            <input type='file' id='pix' hidden   onChange={UploadImage}/>
-            <label htmlFor='pix'> Upload Image </label> 
+            <input type='file' id='pix' hidden  onChange={UploadImage}/>
+            <label htmlFor='pix' 
+                onChange={(e)=> UploadImage(e) }
+            > Upload Image </label> 
         </div>
 
         <div className='AddProduct5'> 

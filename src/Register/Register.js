@@ -10,7 +10,7 @@ const dispatch = useDispatch();
 const navigate = useNavigate()
 
 const [login, setLogin] = useState(true)
-const [register, setRegister] = useState(false)
+const [register, setRegister] = useState(false)   
 const [email, setRemail] = useState()
 const [password, setPassword] = useState("")
 const [name, setrname] = useState("")
