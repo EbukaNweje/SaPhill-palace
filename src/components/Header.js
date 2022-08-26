@@ -77,6 +77,7 @@ const Header = () => {
                 </ul>
                }
             </ul>
+            <li onClick={() => hist('/AdminDashboard')}>Disp</li>
           </div>
       </div>
     </div>
