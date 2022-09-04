@@ -63,8 +63,6 @@ const Booking = () => {
         // console.log(newBooking)
       }
       
-      // const Url = 'https://saphill-palace.herokuapp.com/api/Order/new'
-
       const Payment = () => {
         const paystacks = new paystackpop()
         paystacks.newTransaction({
@@ -98,17 +96,6 @@ const Booking = () => {
         }catch (err) {
             console.log(err.message)
         }
-      // data.map((datum) => 
-      // axios.post(Url,{
-      //   name: bookingDetails.firstName + bookingDetails.lastName,
-      //   products: datum.Name + datum.Price,
-      //   Address: bookingDetails.streetAddress,
-      //   Gross: totalCostState,
-      //   phone: bookingDetails.phone,
-      //   company: bookingDetails.companyName,
-      //   Admin: 1000
-      // }).then(res=> res).catch((error) => {if (error.res){console.log(error.res)}; console.log(datum.Name)} )
-      //  )
      }
 
       
