@@ -1,13 +1,15 @@
 import React from 'react'
 import "../footer/CSS/style.css"
 import "../footer/CSS/mobile.css"
+import {FaRocket, FaCcMastercard} from "react-icons/fa"
+// import {IoReloadOutline} from "react-icons/io"
 
 const Footer = () => {
   return (
     <div className='footercont'>
       <div className='footerDiv'>
-      <div>
-        <img src='Assets/rocket_100px.png' alt=''></img>
+      <div className='footericon'>
+        <p><FaRocket className='RocketIcon fcard'/></p>
       </div>
         <div className='footertext'>
           <h4>Our Delivery</h4>
@@ -15,8 +17,8 @@ const Footer = () => {
         </div>
       </div>
       <div className='footerDiv'>
-        <div>
-          <img src='Assets/rocket_100px.png' alt=''/>
+        <div className='footericon'>
+          {/* <p><IoReloadOutline/></p> */}
         </div>
         <div className='footertext'>
         <h4>7 Days Return</h4>
@@ -24,8 +26,8 @@ const Footer = () => {
         </div>
       </div>
       <div className='footerDiv'>
-      <div>
-        <img src='Assets/rocket_100px.png' alt=''></img>
+      <div className='footericon'>
+        <p><FaCcMastercard className='RocketIcon pcard'/></p>
       </div>
         <div className='footertext'>
         <h4>Secure Payment</h4>
@@ -34,7 +36,7 @@ const Footer = () => {
       </div>
       <div className='footerDiv'>
       <div>
-        <img src='Assets/rocket_100px.png' alt=''></img>
+        <img src='' alt=''></img>
       </div>
         <div className='footertext footerlast'>
         <h4>24/7 Support</h4>

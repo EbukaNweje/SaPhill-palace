@@ -4,19 +4,21 @@ import "../Css/mobileC.css"
 import Logo from "../asset/SaPhill Palace2.png"
 import { AiOutlineShoppingCart, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { HiOutlineUser } from 'react-icons/hi'
+import { MdOutlineSpaceDashboard } from 'react-icons/md'
 import Mobile from './Mobile';
 import { useSelector, useDispatch } from "react-redux";
 import { signOut } from "../components/Global/ProductState"
 import { useNavigate  } from "react-router-dom"
 
 
-
 const Header = () => {
   const hist = useNavigate();
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.persisitedReducer.bookings);
+  const GetUser = useSelector((state) => state.persisitedReducer.GetUser);
   const id = JSON.parse(localStorage.getItem("User"))
-  // console.log(id.message)
+  const admin = GetUser.isAdmin
+  // console.log("this   is the user",admin)
   
   const [toggle, setToggle] = useState(false)
     const onToggle = () => {
@@ -57,7 +59,7 @@ const Header = () => {
                      <AiOutlineShoppingCart className='Icons' onClick={() => hist('/cart')}/>
                    <span className='NumAdd'>{cart.length}</span>
               </div>
-            <ul> 
+            <ul className='UserDeee'> 
             {
               !id ? <HiOutlineUser className='Icons' onClick={() => hist('/Registration')}/> :<HiOutlineUser className='Icons' onClick={() => hist('/')}/>
             }
@@ -68,16 +70,18 @@ const Header = () => {
                 <li> Register </li> 
                 </ul>
                 : 
-                <ul onClick={() => hist('/')}>
+                <ul onClick={() => hist('/')} className='userD' >
                   <li>{id.message}</li>
                   <li onClick={()=>{
                     localStorage.removeItem("User");
                     dispatch(signOut())
-                  }}>Sign Out</li>
+                  }} className='signoutd' >Sign Out</li>
                 </ul>
                }
             </ul>
-            <li onClick={() => hist('/AdminDashboard')}>Disp</li>
+            {
+              admin ? <li onClick={() => hist('/AdminDashboard')} className='dashddd'><MdOutlineSpaceDashboard className='Icons'/></li> : null
+            }
           </div>
       </div>
     </div>

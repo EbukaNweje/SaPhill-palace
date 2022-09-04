@@ -6,7 +6,8 @@ const initialState = {
   bookings: [],
   AllCart: [],
   LogId: "",
-  GetUser: []
+  GetUser: [],
+  Mycat: []
   // totalRoomCost: 0,
 };
 
@@ -18,7 +19,8 @@ const ProductState = createSlice({
       state.product = payload;
     },
     addBooking: (state, { payload }) => {
-      const check = state.bookings.findIndex((el) => el.id === payload.id);
+      const check = state.bookings.findIndex((el) => el._id === payload._id);
+      console.log("this is check",check)
       if (check >= 0) {
         state.bookings[check].QTY += 1;
       } else {
@@ -30,24 +32,24 @@ const ProductState = createSlice({
       }
     },
     changeDays: (state, { payload }) => {
-      const check = state.bookings.findIndex((el) => el.id === payload.id);
+      const check = state.bookings.findIndex((el) => el._id === payload._id);
       let checkValue = state.bookings[check].QTY;
 
       if (state.bookings[check].QTY > 1) {
         state.bookings[check].QTY -= 1;
       } else if (checkValue === 1) {
-        state.bookings = state.bookings.filter((fl) => fl.id !== payload.id);
+        state.bookings = state.bookings.filter((fl) => fl._id !== payload._id);
       }
     },
     removeBooking: (state, { payload }) => {
-      state.bookings = state.bookings.filter((fl) => fl.id !== payload.id);
+      state.bookings = state.bookings.filter((fl) => fl._id !== payload._id);
     },
 
     totalState: (state, { payload }) => {
       const { totalCost } = state.bookings.reduce(
         (mainCost, allCost) => {
-          const { Price, QTY } = allCost;
-          const totalPrice = Price * QTY;
+          const { price, QTY } = allCost;
+          const totalPrice = price * QTY;
           mainCost.totalCost += totalPrice;
           mainCost.totalDays += QTY;
 
@@ -71,6 +73,11 @@ const ProductState = createSlice({
     state.GetUser = payload
     console.log(payload)
   },
+
+  GetCat: (state, {payload})=>{
+    state.Mycat = payload 
+    // console.log(payload)
+  },
   signOut: (state) => {
     state.LogId = "";
     state.GetUser = [];
@@ -79,6 +86,6 @@ const ProductState = createSlice({
   },
 });
 
-export const { addBooking, addProduct, removeBooking, changeDays, totalState, addId, removeId,GetUser, signOut} =
+export const { addBooking, addProduct, removeBooking, changeDays, totalState, addId, removeId,GetUser, GetCat, signOut} =
   ProductState.actions;
 export default ProductState.reducer;

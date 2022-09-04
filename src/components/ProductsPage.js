@@ -8,11 +8,9 @@ const ProductsPage = () => {
             <div className='ProductsPageLeft'> 
                 <div className='ProductsPageLeftTop'> 
                     <h3> New & Product </h3>
-                    <ul > 
-                    </ul>
                 </div>
 
-                <span> View All </span>
+                {/* <span> View All </span> */}
             </div>
             
             <div className='ProductsPageMid'> 

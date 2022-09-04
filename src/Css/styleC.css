@@ -145,6 +145,26 @@ a {
   color: white;
 }
 
+.dashddd {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.8px;
+  cursor: pointer;
+  color: white;
+  margin-left: 20px;
+}
+
+.signoutd {
+  display: none;
+  position: absolute;
+  top: 85px;
+  transition: all 350ms;
+}
+
+.userD:hover > .signoutd {
+  display: flex;
+}
+
 .HomePage {
   width: 100%;
   height: max-content;
@@ -1055,4 +1075,47 @@ a {
 .PriceAdd span {
   margin-left: 10px;
   margin-bottom: 5px;
+}
+
+.AllProduct {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 100px 20px 20px;
+}
+
+.AdminAllProduct {
+  width: 100%;
+  height: 90%;
+  overflow-y: auto;
+  margin-top: 20px;
+}
+
+.ProductRow {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ProImg {
+  width: 80px;
+  height: 80px;
+  background: #000;
+}
+
+.UlI li {
+  margin: 30px 10px;
+}
+
+.Loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
