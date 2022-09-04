@@ -51,12 +51,12 @@ const Cart = () => {
           <div className="CartPropsBody">
               {
                 data.map((props)=>(
-                  <div className="CartPoprs" key={props.id}>
+                  <div className="CartPoprs" key={props._id}>
                 <div className="Prd MT Pd MB">
-                    <div className="ProductImgCart"><img src={props.Image} alt="ProductImage"/></div>
-                    <span className="ProductInfo">{props.Name}</span>
+                    <div className="ProductImgCart"><img src={props.image} alt="ProductImage"/></div>
+                    <span className="ProductInfo">{props.name}</span>
                 </div>
-                <div className="Prc MT"><span className="ProductInfo">&#8358; {props.Price}</span></div>
+                <div className="Prc MT"><span className="ProductInfo">&#8358; {props.price}</span></div>
                 <div className="Qutt MT Quut MB">
                   <div className="AddQut"
                   onClick={() => {
@@ -70,7 +70,7 @@ const Cart = () => {
                   }}
                   >-</div>
                 </div>
-                <div className="Total MT">{props.Price * props.QTY}</div>
+                <div className="Total MT">{props.price * props.QTY}</div>
                 <div className="Del MT"
                 onClick={() => {
                   dispatch(removeBooking(props))

@@ -1,8 +1,13 @@
 import React from 'react'
 import SaPhilHairsRight from './SaPhilHairsRight'
 import hairAda from "../asset/cat10.jpg"
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 
 const SaPhilHairsMain = () => {
+    const hist = useNavigate()
+    const Mycart = useSelector((state) => state.persisitedReducer.Mycat);
     return (
         <div className='ProductsPage'>
         <div className='ProductsPageWrapper'> 
@@ -13,7 +18,8 @@ const SaPhilHairsMain = () => {
                     </ul>
                 </div>
     
-                <span> View All </span>
+                <span onClick={() => hist(`/ProductPage/${Mycart[3]._id}/${Mycart[3].name}`)} > View All </span>
+
             </div>
             
             <div className='ProductsPageMid'> 

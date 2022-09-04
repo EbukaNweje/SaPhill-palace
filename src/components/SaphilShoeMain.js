@@ -1,8 +1,13 @@
 import React from 'react'
 import SaohilShoeRight from './SaohilShoeRight'
 import shoeAda from "../asset/cat1.jpg"
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const SaphilShoeMain = () => {
+    const hist = useNavigate();
+    const Mycart = useSelector((state) => state.persisitedReducer.Mycat);
+
     return (
         <div className='ProductsPage'>
         <div className='ProductsPageWrapper'> 
@@ -13,7 +18,7 @@ const SaphilShoeMain = () => {
                     </ul>
                 </div>
     
-                <span> View All </span>
+                <span onClick={() => hist(`/ProductPage/${Mycart[2]._id}/${Mycart[2].name}`)} > View All </span>
             </div>
             
             <div className='ProductsPageMid'> 

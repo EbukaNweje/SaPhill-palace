@@ -15,6 +15,10 @@
         flex-direction: column;
     }
 
+    .FooterAdd {
+        width: 200px;
+    }
+
     .Bottomfootercont {
         flex-direction: column;
     }

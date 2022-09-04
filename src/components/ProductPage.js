@@ -1,7 +1,7 @@
 import React from 'react'
 import datas from "../components/Cartigories.json"
 import { useParams } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addProduct, addBooking } from "./Global/ProductState";
 import "../Css/styleC.css"
 import Categories from './Categories';
@@ -12,33 +12,43 @@ import { useNavigate } from "react-router-dom";
 
 const ProductPage = () => {
 const { id } = useParams();
-console.log(id)
+// console.log("This is Allpage id",id)
 const hist = useNavigate();
 const dispatch = useDispatch();
 dispatch(addProduct(datas));
-const myValue = datas[id - 1];
-console.log(myValue.Product)
+const Mycart = useSelector((state) => state.persisitedReducer.Mycat);
+// console.log(myValue.Product)
+
+const GetAllProductApi = JSON.parse(localStorage.getItem('ClothApi'))
+
+let myValue = GetAllProductApi.filter((datum) => datum.category === id )
+let myValueCAt = Mycart.filter((datumcat) => datumcat._id === id )
+// const GetAllProductApiLength = GetAllProductApi.length
+// const myValue = GetAllProductApi[GetAllProductApiLength - 1];
+console.log("This is Allpage GetAllProductApi",myValueCAt)
+
+
+
   return (
     <div className='ProductPageWrapper'>
         <article> 
-            <h2>{myValue.CartigoriesName}</h2>
+            <h2>{myValueCAt[0].name}</h2>
             <div className='ProductPageIn2'> 
                 <div className='ProductPageIn2_1'><Categories className="ShopCat"/></div>
                 <div className='ProductPageIn2_2'> 
-                    <h3> 1 product found </h3>
+                    <h3> {myValue.length} product found </h3>
                     <div className='CartigoriesProductMain'> 
                         {
-                            myValue.Product.map((item)=>( 
-                            <div className='CartigoriesProductCard' key={item.id}>
-                            <img src={item.Image} alt='ProductImg' className='CartigoriesProductImg'/>
-                            <h3> {item.Name} </h3>
+                            myValue.map((item)=>( 
+                            <div className='CartigoriesProductCard' key={item._id}>
+                            <img src={item.image} alt='ProductImg' className='CartigoriesProductImg'/>
+                            <h3> {item.name} </h3>
                             <div className='PriceAdd'> 
-                                <span>&#8358; {item.Price} </span>
-                                {/* <p className='ProductPriceDic'>&#8358; {item.DicPrice} </p> */}
+                                <span>&#8358; {item.price} </span>
                             </div>
                             <div className='AddButton'>
                                 <AiOutlineShoppingCart className='IconC'  onClick={() => dispatch(addBooking(item))}/>
-                                <FaRegEye className='IconC'  onClick={() => hist(`/Details/${item.id}`)}/>
+                                <FaRegEye className='IconC'  onClick={() => hist(`/Details/${item._id}`)}/>
                             </div>
                         </div>
                             ))

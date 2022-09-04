@@ -23,12 +23,12 @@
   display: flex;
   padding-right: 5px;
 }
-.footerDiv img {
+/* .footerDiv img {
   width: 70px;
   height: 90px;
   object-fit: contain;
 }
-
+ */
 .footertext {
   margin-top: 20px;
   padding-right: 10px;
@@ -79,8 +79,29 @@
   margin-bottom: 15px;
 }
 
+.footericon{
+  width: 55px;
+  margin-top: 20px;
+  margin-right: 15px;
+  height: 90px;
+}
+
+.pcard {
+  color: red;
+}
+
+.fcard {
+  color: rgb(9, 133, 211);
+
+}
+
+.RocketIcon {
+  width: 100%;
+  height: 100%;
+}
+
 .Midfootercontact span p {
-  width: 25%;
+  width: 55%;
   display: flex;
   font-weight: 700;
   font-size: 17px;

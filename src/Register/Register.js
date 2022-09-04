@@ -49,6 +49,9 @@ const urlL = "https://saphill-palace.herokuapp.com/user/login"
         const getUser = JSON.parse(localStorage.getItem("User"))
         dispatch(addId(getUser.data._id))
         dispatch(GetUser(getUser.data))
+
+        
+        
         console.log(res)
         }
         )
