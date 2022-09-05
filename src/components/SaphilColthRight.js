@@ -23,14 +23,16 @@ const SaphilColthRight = () => {
     // dispatch(addProduct(getclothAip));
     // console.log("This is Api data ", getclothAip)
 
-    const GetClothData = () =>{
+    // const GetClothData = () =>{
+    //   Axios.get('https://saphill-palace.herokuapp.com/user/products/')
+    //   .then(res =>dispatch(GetAllProduct(res.data.data)))
+    //   // localStorage.setItem("ClothApi", JSON.stringify(res.data.data))  
+    // }
+
+    useEffect(()=>{
       Axios.get('https://saphill-palace.herokuapp.com/user/products/')
       .then(res =>dispatch(GetAllProduct(res.data.data)))
       // localStorage.setItem("ClothApi", JSON.stringify(res.data.data))  
-    }
-
-    useEffect(()=>{
-      GetClothData()
     },[dispatch])
 
     let GetclothAipData = MyProduct.filter((datum) => datum.category === ClothId )

@@ -13,16 +13,17 @@ const Categories = () => {
     const removeCat = '62fcb1c2472321cf48c56124'
     const removeCatTwo = '62ebaabd314bed49450544fd'
 
-    const Getdata = () =>{
-        Axios.get("https://saphill-palace.herokuapp.com/user/allcat")
-        .then(res =>{dispatch(GetCat(res.data.data))})
-        // const getCats = JSON.parse(localStorage.getItem("Mycat"))
-        // console.log(getCats)
-    }   
+    // const Getdata = () =>{
+    //     Axios.get("https://saphill-palace.herokuapp.com/user/allcat")
+    //     .then(res =>{dispatch(GetCat(res.data.data))})
+    //     // const getCats = JSON.parse(localStorage.getItem("Mycat"))
+    //     // console.log(getCats)
+    // }   
 
     useEffect(()=>{
-        Getdata()
-    },[])
+        Axios.get("https://saphill-palace.herokuapp.com/user/allcat")
+        .then(res =>{dispatch(GetCat(res.data.data))})
+    },[dispatch])
 
     const newCatarr = Mycart.filter((id)=> id._id !== removeCat &&  id._id  !== removeCatTwo)
 
