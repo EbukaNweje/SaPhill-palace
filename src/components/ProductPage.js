@@ -19,13 +19,14 @@ dispatch(addProduct(datas));
 const Mycart = useSelector((state) => state.persisitedReducer.Mycat);
 // console.log(myValue.Product)
 
-const GetAllProductApi = JSON.parse(localStorage.getItem('ClothApi'))
+// const GetAllProductApi = JSON.parse(localStorage.getItem('ClothApi'))
+const MyProduct = useSelector((state) => state.persisitedReducer.AllProduct);
 
-let myValue = GetAllProductApi.filter((datum) => datum.category === id )
+let myValue = MyProduct.filter((datum) => datum.category === id )
 let myValueCAt = Mycart.filter((datumcat) => datumcat._id === id )
 // const GetAllProductApiLength = GetAllProductApi.length
 // const myValue = GetAllProductApi[GetAllProductApiLength - 1];
-console.log("This is Allpage GetAllProductApi",myValueCAt)
+// console.log("This is Allpage GetAllProductApi",myValueCAt)
 
 
 

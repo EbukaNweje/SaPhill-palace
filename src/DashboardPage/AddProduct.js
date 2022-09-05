@@ -189,15 +189,12 @@ import {yupResolver} from "@hookform/resolvers/yup"
 import * as yup from "yup"
 // import {Link, useParams, useNavigate} from "react-router-dom"
 import axios from "axios"
-import { useSelector, useDispatch } from "react-redux";
-import Axios from "axios"
-import { GetCat } from "../components/Global/ProductState"
+import { useSelector } from "react-redux";
 
 
 
 const Create = ()=>{
 //   const navigate = useNavigate()
-  const dispatch = useDispatch();
   const Mycart = useSelector((state) => state.persisitedReducer.Mycat);
     const [imageDB, setImageDB] = useState("")
     const [avatar, setAvatar] = useState("")
@@ -209,11 +206,7 @@ const Create = ()=>{
     // const GetUser = useSelector((state) => state.persisitedReducer.GetUser);
     // let token = GetUser.token
   
-             Axios.get("https://saphill-palace.herokuapp.com/user/allcat")
-                .then(res =>{localStorage.setItem("Mycat", JSON.stringify(res.data.data))})
-                const getCats = JSON.parse(localStorage.getItem("Mycat"))
-                // console.log(getCats)
-                dispatch(GetCat(getCats))
+                  
 
 
             console.log(cati)
@@ -272,9 +265,6 @@ const Create = ()=>{
               console.log(error.config);
       }
     })
-//     useEffect(()=>{
-//     GetCats()
-// },[])
     
     return(
         <Container>

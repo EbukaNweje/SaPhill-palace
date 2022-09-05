@@ -1,25 +1,26 @@
 import React from 'react'
-import NewData from "../components/NewData.json"
+// import NewData from "../components/NewData.json"
 import { FaRegEye } from 'react-icons/fa';
 import {  AiOutlineShoppingCart  } from 'react-icons/ai';
-import { useDispatch } from "react-redux";
-import { addBooking, addProduct } from "./Global/ProductState";
+import {useDispatch, useSelector } from "react-redux";
+import { addBooking } from "./Global/ProductState";
 import { useNavigate } from "react-router-dom";
 import { SpinnerCircularSplit } from "spinners-react"
 
 const SaphilWatchRight = () => {
-    let Data = NewData.slice(0, NewData.length - 12)
-    console.log(Data)
+    // let Data = NewData.slice(0, NewData.length - 12)
+    // console.log(Data)
 
     const hist = useNavigate();
     const dispatch = useDispatch();
-    dispatch(addProduct(NewData));
+    const MyProduct = useSelector((state) => state.persisitedReducer.AllProduct);
+    // dispatch(addProduct(NewData));
 
     const WatchId = '62fcf5a29f741f69e4621c0c'
-    const GetWatchAip = JSON.parse(localStorage.getItem('ClothApi'))
-    dispatch(addProduct(GetWatchAip));
+    // const GetWatchAip = JSON.parse(localStorage.getItem('ClothApi'))
+    // dispatch(addProduct(GetWatchAip));
 
-    let GetWatchAipData = GetWatchAip.filter((datum) => datum.category === WatchId )
+    let GetWatchAipData = MyProduct.filter((datum) => datum.category === WatchId )
 
 
     return (
@@ -37,7 +38,6 @@ const SaphilWatchRight = () => {
           </div>
           <h3> {props.name} </h3>
           <h5> ₦ {props.price} </h5>
-          {/* <h6> ₦ {props.DicPrice} </h6> */}
       </div>
         ))
          : <div className='Loading'><SpinnerCircularSplit size={100} thickness={100} speed={100} color="red" secondaryColor="gray" /></div>
