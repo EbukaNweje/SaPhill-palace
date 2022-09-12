@@ -5,6 +5,7 @@ import {  AiOutlineShoppingCart  } from 'react-icons/ai';
 import { useDispatch, useSelector } from "react-redux";
 import { addBooking } from "./Global/ProductState";
 import { useNavigate } from "react-router-dom";
+import { SpinnerCircularSplit } from "spinners-react"
 
 const ProductPageRightCard = () => {
   // console.log(Data)
@@ -22,6 +23,7 @@ const ProductPageRightCard = () => {
   
    <>
     {
+    Data.length ?
       Data.map((props)=>(
         <div className='ProductsPageRightCard' key={props._id}> 
         <div className='ProductCardImgDiv'> 
@@ -35,7 +37,7 @@ const ProductPageRightCard = () => {
         <h5> ₦ {props.price} </h5>
      
     </div>
-      ))
+      )): <div className='Loading'><SpinnerCircularSplit size={100} thickness={100} speed={100} color="red" secondaryColor="gray" /></div>
     }
    </>
   )

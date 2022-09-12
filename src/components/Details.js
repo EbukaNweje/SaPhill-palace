@@ -67,7 +67,7 @@ const URL = `https://saphill-palace.herokuapp.com/user/product/${id}`
                 </div>
                 <div className='DetailsWrapperArticle_3In2'> 
                     <h4> {myValue.name} </h4>
-                    <p> {myValue.descrition}</p>
+                    <p> {myValue.description}</p>
                 </div>
             </div>
 

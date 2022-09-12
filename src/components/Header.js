@@ -18,7 +18,7 @@ const Header = () => {
   const GetUser = useSelector((state) => state.persisitedReducer.GetUser);
   const id = JSON.parse(localStorage.getItem("User"))
   const admin = GetUser.isAdmin
-  // console.log("this   is the user",admin)
+  console.log("this   is the user",GetUser.name)
   
   const [toggle, setToggle] = useState(false)
     const onToggle = () => {
@@ -72,15 +72,20 @@ const Header = () => {
                 : 
                 <ul onClick={() => hist('/')} className='userD' >
                   <li>{id.message}</li>
-                  <li onClick={()=>{
-                    localStorage.removeItem("User");
-                    dispatch(signOut())
-                  }} className='signoutd' >Sign Out</li>
                 </ul>
                }
             </ul>
             {
               admin ? <li onClick={() => hist('/AdminDashboard')} className='dashddd'><MdOutlineSpaceDashboard className='Icons'/></li> : null
+            }
+            {
+              GetUser.name ? 
+              <ul>
+              <li onClick={()=>{
+                    localStorage.removeItem("User");
+                    dispatch(signOut())
+                  }} className='signoutd' >Sign Out</li>
+              </ul> : ""
             }
           </div>
       </div>

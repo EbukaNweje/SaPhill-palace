@@ -205,9 +205,6 @@ const Create = ()=>{
     const id = useSelector((state) => state.persisitedReducer.LogId);
     // const GetUser = useSelector((state) => state.persisitedReducer.GetUser);
     // let token = GetUser.token
-  
-                  
-
 
             console.log(cati)
 
@@ -289,7 +286,7 @@ const Create = ()=>{
                         <option>Choose a Categories</option>
                             {
                                 Mycart.map((mycat)=> (
-                                    <option value={mycat._id}>{mycat.name}</option>
+                                    <option value={mycat._id} key={mycat._id}>{mycat.name}</option>
                                 ))
                             }
                     </select>

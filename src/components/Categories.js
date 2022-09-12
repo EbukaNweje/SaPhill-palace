@@ -3,6 +3,7 @@ import React, {useEffect} from 'react'
 import { useNavigate } from "react-router-dom";
 import { GetCat } from "../components/Global/ProductState"
 import { useSelector, useDispatch } from "react-redux";
+import { NavLink } from 'react-router-dom';
 import Axios from "axios"
 
 const Categories = () => {
@@ -31,10 +32,12 @@ const Categories = () => {
 
   return (
     <div className='Categories'>
-        <div className='CategoriesDiv'> 
-            <h4> + </h4>
-            <h4> Sell on SaPhill Palace </h4>
-        </div>     
+        <NavLink to="/SellerRegistration">
+            <div className='CategoriesDiv'> 
+                <h4> + </h4>
+                <h4> Sell on SaPhill Palace </h4>
+            </div>     
+        </NavLink>
 
         {
             newCatarr.map((CartigoriesS)=>(

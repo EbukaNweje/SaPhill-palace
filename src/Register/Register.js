@@ -16,6 +16,7 @@ const [password, setPassword] = useState("")
 const [name, setrname] = useState("")
 const [lemail, setLemail] = useState("")
 const [lpassword, setLpassword] = useState("")
+const [message, setMessage] = useState({ error: false, msg: "" });
 
 const url = "https://saphill-palace.herokuapp.com/user/register"
 const urlL = "https://saphill-palace.herokuapp.com/user/login"
@@ -27,12 +28,12 @@ const urlL = "https://saphill-palace.herokuapp.com/user/login"
       password: password,
       email: email
     })
-    .then(res=>{ console.log(res)})
-    .then({
-      name: "",
-      password: "",
-      email: ""
-    })
+    .then(res =>
+      console.log(res),
+      // alert("welcome"),
+      // navigate("/")
+      )
+
   }
   // const reset = ()=>{
   //     setLemail("")
@@ -40,6 +41,9 @@ const urlL = "https://saphill-palace.herokuapp.com/user/login"
   // }
 
    const Login = () =>{
+      if(!lemail || !lpassword){
+        setMessage({msg: "You need to fill all this from!" });
+      }else{
         Axios.post(urlL,{
           password: lpassword,
           email: lemail
@@ -56,14 +60,17 @@ const urlL = "https://saphill-palace.herokuapp.com/user/login"
         }
         )
         .then(()=>{
-          alert("Succcessful")
-          navigate("/")
+          setMessage({ error: true, msg: "successfully!" });
+          setTimeout(() => {
+            navigate("/")
+          }, [2000]);
         })
         .catch((error)=>{
-        alert("jfdkbkjdkf")
+          setMessage({msg: "user not found" });
         console.log(error)
         //  reset(),
       })
+      }
     }
 
   return (      
@@ -104,6 +111,9 @@ const urlL = "https://saphill-palace.herokuapp.com/user/login"
                Log In Your Account
               </div>
             <section className='RegistercardInput'>
+            {message?.msg && (
+              <div className='Erro'>{message?.msg}</div>
+              )}
                 <input className='RegisterInput' type="text" placeholder='email' value={lemail} onChange ={(e)=>{setLemail(e.target.value)}}/>
                 <input className='RegisterInput' type="password" placeholder='password' value={lpassword} onChange ={(e)=>{setLpassword(e.target.value)}}/>
                 <article className='RegisterArt'>

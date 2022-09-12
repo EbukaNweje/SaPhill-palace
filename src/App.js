@@ -13,11 +13,15 @@ import ProductPage from './components/ProductPage';
 import AdminDash from './DashboardPage/AdminDash';
 import Registration from './Register/Registration';
 import FooterMain from './footer/FooterMain';
+import SellerRigister from './Register/SellerRigister';
+import ScrollToTop from './components/ScrollToTop';
+
 
 const App = () => {
   
   return (
   <BrowserRouter>
+  <ScrollToTop />
     <Header/>
     <Routes>
       <Route path="/" element={<HomePage />}/>
@@ -27,6 +31,7 @@ const App = () => {
       <Route path='/Details/:id' element={<Details/>}/>
       <Route path='/AdminDashboard' element={<AdminDash/>} />
       <Route path='/ProductPage/:id/:CartigoriesName' element={<ProductPage/>}/>
+      <Route path='/SellerRegistration' element={<SellerRigister/>} />
     </Routes>
     <FooterMain/>
   </BrowserRouter>

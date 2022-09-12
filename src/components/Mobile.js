@@ -20,11 +20,13 @@ const Mobile = ({setToggle, toggle}) => {
     <div className='MobileMenu'>
         <nav className='Nav'>
             <ul className='UlI'>
+              <Link to="/SellerRegistration" className='Link'>
                 <li
                 onClick={()=>{
                     setToggle()
                 }}
                 > <AiFillShop className='Micon'/>Sell on SaPhill Palace</li>
+                 </Link>
                 {
                   newCatarr.map((Cartigories)=>(
                     <ul className='UlI' key={Cartigories._id}>

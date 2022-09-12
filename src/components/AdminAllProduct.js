@@ -1,36 +1,36 @@
 import React from 'react'
+import { useSelector } from "react-redux";
+import axios from "axios"
 
 const AdminAllProduct = () => {
+  const MyProduct = useSelector((state) => state.persisitedReducer.AllProduct);
+  console.log(MyProduct)
+
+  const deleteHandler = async (_id) => {
+    try{
+      await axios.delete(`https://saphill-palace.herokuapp.com/user/product/${_id}`)
+      window.location.reload()
+    }catch(error){
+      console.log(error.response)
+    }
+   
+  };
+
   return (
     <div className='AdminAllProduct'>
-        <div className='ProductRow'> 
-            <div className='ProImg'> </div>
-            <h4> Product Name </h4>
-            <h4> Quantity </h4>
-            <h4> Description </h4>
-            <h4> Price  </h4>
-            <h4> Stock</h4>
-        </div>
-        
-        <div className='ProductRow'> 
-            <div className='ProImg'> </div>
-            <h4> Product Name </h4>
-            <h4> Quantity </h4>
-            <h4> Description </h4>
-            <h4> Price  </h4>
-            <h4> Stock</h4>
-        </div>
-
-        <div className='ProductRow'> 
-            <div className='ProImg'> </div>
-            <h4> Product Name </h4>
-            <h4> Quantity </h4>
-            <h4> Description </h4>
-            <h4> Price  </h4>
-            <h4> Stock</h4>
-        </div>
-
-
+      {
+        MyProduct.map((props)=>(
+          <div className='ProductRow' key={props._id}> 
+          <div className='ProImg'><img src={props.image} alt="Productimage" /> </div>
+          <h4> {props.name} </h4>
+          <h4> {props.quantity} </h4>
+          {/* <h4> Description </h4> */}
+          <h4> {props.price}  </h4>
+          <h4> Stock</h4>
+          <button onClick={(_id)=>deleteHandler(props._id)}>Delete</button>
+      </div>
+        ))
+      }
 
     </div>
   )

@@ -1,7 +1,9 @@
 import React from 'react'
 import AdminAllProduct from '../components/AdminAllProduct'
 
+
 const AllProduct = () => {
+ 
   return (
     <div className='AllProduct'>
       
