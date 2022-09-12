@@ -28,9 +28,13 @@ const urlL = "https://saphill-palace.herokuapp.com/user/login"
       password: password,
       email: email
     })
-    .then(res =>
-      console.log(res),
-      // alert("welcome"),
+    .then(() =>
+     {
+      setMessage({msg: "User Register successfully!" });
+      setTimeout(() => {
+        window.location.reload()
+      }, [1000]);
+     }
       // navigate("/")
       )
 
@@ -133,6 +137,9 @@ const urlL = "https://saphill-palace.herokuapp.com/user/login"
               Register An Account
          </div>
             <section className='RegistercardInput'>
+            {message?.msg && (
+              <div className='Erro'>{message?.msg}</div>
+              )}
             <input className='RegisterInput' type="text" placeholder='Username' value={name} onChange ={(e)=>{setrname(e.target.value)}}/>
             <input className='RegisterInput' type="text" placeholder='email' value={email} onChange ={(e)=>{setRemail(e.target.value)}}/>
                 <input className='RegisterInput' type="password" placeholder='password' value={password} onChange ={(e)=>{setPassword(e.target.value)}}/>
