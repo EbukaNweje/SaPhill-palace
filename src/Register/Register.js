@@ -4,6 +4,7 @@ import Axios from "axios"
 import { addId, GetUser } from "../components/Global/ProductState"
 import {useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom"
+// import { Alert } from 'react-bootstrap'; 
 
 const Register = () => {
 const dispatch = useDispatch();
@@ -21,8 +22,7 @@ const [message, setMessage] = useState({ error: false, msg: "" });
 const url = "https://saphill-palace.herokuapp.com/user/register"
 const urlL = "https://saphill-palace.herokuapp.com/user/login"
 
-  const RegisterUser = (e)=>{
-    // e.preventDefault()
+  const RegisterUser = ()=>{
     Axios.post(url,{
       name: name,
       password: password,
@@ -30,23 +30,22 @@ const urlL = "https://saphill-palace.herokuapp.com/user/login"
     })
     .then(() =>
      {
-      setMessage({msg: "User Register successfully!" });
+      setMessage({error: true, msg: "User Register successfully!" });
       setTimeout(() => {
         window.location.reload()
       }, [1000]);
      }
-      // navigate("/")
-      )
+      ).catch(()=>{
+        if(!name || !email || !password){
+          setMessage({error: false, msg: "You need to fill all this from!" });
+        }
+      })
 
   }
-  // const reset = ()=>{
-  //     setLemail("")
-  //     setLpassword("")
-  // }
 
    const Login = () =>{
       if(!lemail || !lpassword){
-        setMessage({msg: "You need to fill all this from!" });
+        setMessage({error: false, msg: "You need to fill all this from!" });
       }else{
         Axios.post(urlL,{
           password: lpassword,
@@ -57,9 +56,6 @@ const urlL = "https://saphill-palace.herokuapp.com/user/login"
         const getUser = JSON.parse(localStorage.getItem("User"))
         dispatch(addId(getUser.data._id))
         dispatch(GetUser(getUser.data))
-
-        
-        
         console.log(res)
         }
         )
@@ -70,7 +66,7 @@ const urlL = "https://saphill-palace.herokuapp.com/user/login"
           }, [2000]);
         })
         .catch((error)=>{
-          setMessage({msg: "user not found" });
+          setMessage({error: false, msg: "user not found" });
         console.log(error)
         //  reset(),
       })
@@ -116,8 +112,10 @@ const urlL = "https://saphill-palace.herokuapp.com/user/login"
               </div>
             <section className='RegistercardInput'>
             {message?.msg && (
-              <div className='Erro'>{message?.msg}</div>
-              )}
+              <div className={message?.error ? "alert alert-success" :  "alert alert-danger"} role="alert">
+                {message.msg}
+              </div>
+               )}
                 <input className='RegisterInput' type="text" placeholder='email' value={lemail} onChange ={(e)=>{setLemail(e.target.value)}}/>
                 <input className='RegisterInput' type="password" placeholder='password' value={lpassword} onChange ={(e)=>{setLpassword(e.target.value)}}/>
                 <article className='RegisterArt'>
@@ -125,7 +123,7 @@ const urlL = "https://saphill-palace.herokuapp.com/user/login"
                     <input className='Registercheck' type="checkbox"/>
                     <p>Remember Me</p>
                     </div>
-                    <p className='reglink'>Forgot your password?</p>
+                    {/* <p className='reglink'>Forgot your password?</p> */}
                     </article>
                     <button className='Registerbtn' onClick={()=> Login()}>Log in</button>
             </section>
@@ -138,8 +136,10 @@ const urlL = "https://saphill-palace.herokuapp.com/user/login"
          </div>
             <section className='RegistercardInput'>
             {message?.msg && (
-              <div className='Erro'>{message?.msg}</div>
-              )}
+              <div className={message?.error ? "alert alert-success" :  "alert alert-danger"} role="alert">
+                {message.msg}
+              </div>
+               )}
             <input className='RegisterInput' type="text" placeholder='Username' value={name} onChange ={(e)=>{setrname(e.target.value)}}/>
             <input className='RegisterInput' type="text" placeholder='email' value={email} onChange ={(e)=>{setRemail(e.target.value)}}/>
                 <input className='RegisterInput' type="password" placeholder='password' value={password} onChange ={(e)=>{setPassword(e.target.value)}}/>

@@ -24,7 +24,7 @@ const ProductState = createSlice({
       console.log("this is check",check)
       if (check >= 0) {
         state.bookings[check].QTY += 1;
-      } else {
+      } else  {
         const addValue = {
           ...payload,
           QTY: 1,
