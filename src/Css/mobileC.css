@@ -47,11 +47,12 @@
     margin-left: 90%px;
     display: flex;
     align-items: center;
+    /* background: #000; */
   }
 
   .UserAccount {
     display: flex;
-    margin-right: 10px;
+    /* margin-right: 10px; */
   }
 
   .SearchDivInner {
@@ -72,6 +73,21 @@
 
   .Categories {
     display: none;
+  }
+
+  .signout li {
+    /* background: red; */
+    height: 25px;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    margin-bottom: 20px;
+    margin-right: 30px;
+  }
+
+  .IconAdd {
+    /* background:red; */
+    margin-right: 0px;
   }
 
   .HomePageLeft {

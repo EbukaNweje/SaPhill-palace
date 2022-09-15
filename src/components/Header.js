@@ -65,9 +65,9 @@ const Header = () => {
             }
                {
                  !id?
-                <ul onClick={() => hist('/Registration')}>
-                <li> Log in </li> 
-                <li> Register </li> 
+                <ul id="UserNavigations" onClick={() => hist('/Registration')}>
+                <li> Login </li> 
+                {/* <li> Register </li>  */}
                 </ul>
                 : 
                 <ul onClick={() => hist('/')} className='userD' >
@@ -78,16 +78,16 @@ const Header = () => {
             {
               admin ? <li onClick={() => hist('/AdminDashboard')} className='dashddd'><MdOutlineSpaceDashboard className='Icons'/></li> : null
             }
+          </div>
             {
               GetUser.name ? 
-              <ul>
+              <ul className="signout">
               <li onClick={()=>{
                     localStorage.removeItem("User");
                     dispatch(signOut())
                   }} className='signoutd' >Sign Out</li>
               </ul> : ""
             }
-          </div>
       </div>
     </div>
           { toggle ? ( 
