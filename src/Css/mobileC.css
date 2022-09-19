@@ -344,4 +344,8 @@
   .Micon {
     margin-right: 7px;
   }
+
+  .searchcard {
+    width: 80%;
+  }
 }

@@ -1152,3 +1152,16 @@ a {
   background: green;
   color: white;
 }
+
+.Searchitem {
+  width: 100%;
+  display: flex;
+  background-color: white;
+  /* padding: 10px; */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.searchcard {
+  margin: 10px 10px;
+}

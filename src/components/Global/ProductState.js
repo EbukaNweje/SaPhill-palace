@@ -8,7 +8,8 @@ const initialState = {
   LogId: "",
   GetUser: [],
   Mycat: [],
-  AllProduct: []
+  AllProduct: [],
+  SearchItem: []
   // totalRoomCost: 0,
 };
 
@@ -65,19 +66,21 @@ const ProductState = createSlice({
 
     addId: (state, {payload}) =>{
       state.LogId = payload
-      console.log(payload)
+  },
+
+    search: (state, {payload}) =>{
+      state.SearchItem = payload
+      // console.log("this is my search item",payload)
   },
   removeId: (state, {payload})=>{
     state.LogId = ""
   },
   GetUser: (state, {payload})=>{
     state.GetUser = payload
-    console.log(payload)
   },
 
   GetAllProduct: (state, {payload})=>{
     state.AllProduct = payload
-    console.log(payload)
   },
 
   GetCat: (state, {payload})=>{
@@ -92,6 +95,6 @@ const ProductState = createSlice({
   },
 });
 
-export const { addBooking, addProduct, removeBooking, changeDays, totalState, addId, removeId,GetUser, GetCat, signOut, GetAllProduct} =
+export const { addBooking, addProduct, removeBooking, changeDays, search, totalState, addId, removeId,GetUser, GetCat, signOut, GetAllProduct} =
   ProductState.actions;
 export default ProductState.reducer;

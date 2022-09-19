@@ -15,6 +15,7 @@ import Registration from './Register/Registration';
 import FooterMain from './footer/FooterMain';
 import SellerRigister from './Register/SellerRigister';
 import ScrollToTop from './components/ScrollToTop';
+import Search from './components/Search';
 
 
 const App = () => {
@@ -32,6 +33,7 @@ const App = () => {
       <Route path='/AdminDashboard' element={<AdminDash/>} />
       <Route path='/ProductPage/:id/:CartigoriesName' element={<ProductPage/>}/>
       <Route path='/SellerRegistration' element={<SellerRigister/>} />
+      <Route path='/Search/:SearchName' element={<Search/>} />
     </Routes>
     <FooterMain/>
   </BrowserRouter>

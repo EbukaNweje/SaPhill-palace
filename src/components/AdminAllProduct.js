@@ -4,7 +4,7 @@ import axios from "axios"
 
 const AdminAllProduct = () => {
   const MyProduct = useSelector((state) => state.persisitedReducer.AllProduct);
-  console.log(MyProduct)
+  // console.log(MyProduct)
 
   const deleteHandler = async (_id) => {
     try{

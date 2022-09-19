@@ -36,7 +36,7 @@ const SaphilColthRight = () => {
     },[dispatch])
 
     let GetclothAipData = MyProduct.filter((datum) => datum.category === ClothId )
-    console.log("What i am looking for", GetclothAipData)
+    // console.log("What i am looking for", GetclothAipData)
 
     return (
      <>

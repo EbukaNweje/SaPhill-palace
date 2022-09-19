@@ -7,8 +7,10 @@ import { HiOutlineUser } from 'react-icons/hi'
 import { MdOutlineSpaceDashboard } from 'react-icons/md'
 import Mobile from './Mobile';
 import { useSelector, useDispatch } from "react-redux";
-import { signOut } from "../components/Global/ProductState"
+import { signOut, search } from "../components/Global/ProductState"
 import { useNavigate  } from "react-router-dom"
+// import Search from './Search'
+// import { useSelector } from "react-redux";
 
 
 const Header = () => {
@@ -16,9 +18,21 @@ const Header = () => {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.persisitedReducer.bookings);
   const GetUser = useSelector((state) => state.persisitedReducer.GetUser);
+    const MyProduct = useSelector((state) => state.persisitedReducer.AllProduct);
+    const [searchinput, setSearchinput] = useState("")
+     const filterSearch = ()=> {
+        if(!searchinput){
+          return
+        }else{
+          let find = MyProduct.filter((datum) => datum.name.toUpperCase().includes(searchinput.toUpperCase()))
+          hist(`/Search/${searchinput}`)
+          dispatch(search(find))
+        }
+    }
+    // console.log("this is it",datasearch)
   const id = JSON.parse(localStorage.getItem("User"))
   const admin = GetUser.isAdmin
-  console.log("this   is the user",GetUser.name)
+  // console.log("this   is the user",GetUser.name)
   
   const [toggle, setToggle] = useState(false)
     const onToggle = () => {
@@ -50,8 +64,8 @@ const Header = () => {
                 }}/>
             }
                </div>
-              <input type='text' placeholder='what do you whant to buy?'/>
-              <button> Search </button>
+              <input type='text' placeholder='what do you whant to buy?' value={searchinput} onChange={(e)=> setSearchinput(e.target.value)}/>
+              <button onClick={()=> filterSearch()}> Search </button>
             </div>
           </div>
           <div className='MenuDiv'> 
