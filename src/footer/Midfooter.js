@@ -1,8 +1,10 @@
 import React from 'react'
 import "../footer/CSS/style.css"
+import { useNavigate } from 'react-router-dom'
 import "../footer/CSS/mobile.css"
 
 const Midfooter = () => {
+    const Nav = useNavigate()
   return (
     <div className='Midfooterbody'>
         <div className='Midfootercontact'>
@@ -23,14 +25,14 @@ const Midfooter = () => {
         <div className='Midfooterlinks'>
             <h4>Useful Links</h4>
             <p>FAQ</p>
-            <p>Contact Us</p>
-            <p>Terms and Conditions</p>
+            <p onClick={()=> Nav('/Help')}>Contact Us</p>
+            <p onClick={()=> Nav('/Conditions')}>Terms and Conditions</p>
         </div>
         <div className='Midfooterlinks'>
-            <h4>Let Us Help You</h4>
-            <p>Sell on Saphill Palace</p>
+            <h4>Ask Us A Question</h4>
+            <p onClick={()=> Nav('/SellerRegistration')}>Sell on Saphill Palace</p>
             <p>Seller policy</p>
-            <p>Privacy policy</p>
+            <p onClick={()=> Nav('/Privacy')}>Privacy policy</p>
             <p>Return policy</p>
         </div>
     </div>

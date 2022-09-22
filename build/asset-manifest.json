@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2fa7f8a3.css",
-    "main.js": "/static/js/main.c1316a32.js",
+    "main.css": "/static/css/main.bdeec7ca.css",
+    "main.js": "/static/js/main.4a1fb80c.js",
     "static/js/787.5639fac3.chunk.js": "/static/js/787.5639fac3.chunk.js",
     "static/media/cat9.jpg": "/static/media/cat9.fc0ae44057bf3c45e95c.jpg",
     "static/media/cat8.jpg": "/static/media/cat8.2c01db430080210a87a9.jpg",
@@ -12,12 +12,12 @@
     "static/media/SaPhill Palace2.png": "/static/media/SaPhill Palace2.0666153fd9cf8496226d.png",
     "static/media/paystack-wc.png": "/static/media/paystack-wc.11f8018a97a060f96d35.png",
     "index.html": "/index.html",
-    "main.2fa7f8a3.css.map": "/static/css/main.2fa7f8a3.css.map",
-    "main.c1316a32.js.map": "/static/js/main.c1316a32.js.map",
+    "main.bdeec7ca.css.map": "/static/css/main.bdeec7ca.css.map",
+    "main.4a1fb80c.js.map": "/static/js/main.4a1fb80c.js.map",
     "787.5639fac3.chunk.js.map": "/static/js/787.5639fac3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2fa7f8a3.css",
-    "static/js/main.c1316a32.js"
+    "static/css/main.bdeec7ca.css",
+    "static/js/main.4a1fb80c.js"
   ]
 }

@@ -16,6 +16,9 @@ import FooterMain from './footer/FooterMain';
 import SellerRigister from './Register/SellerRigister';
 import ScrollToTop from './components/ScrollToTop';
 import Search from './components/Search';
+import Privacy from './components/Privacy';
+import Conditions from './components/Conditions';
+import Contactus from './components/Contactus'
 
 
 const App = () => {
@@ -34,6 +37,9 @@ const App = () => {
       <Route path='/ProductPage/:id/:CartigoriesName' element={<ProductPage/>}/>
       <Route path='/SellerRegistration' element={<SellerRigister/>} />
       <Route path='/Search/:SearchName' element={<Search/>} />
+      <Route path='/Privacy/' element={<Privacy/>} />
+      <Route path='/Conditions/' element={<Conditions/>} />
+      <Route path='/Help/' element={<Contactus/>} />
     </Routes>
     <FooterMain/>
   </BrowserRouter>
