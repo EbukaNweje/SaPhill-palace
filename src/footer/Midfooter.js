@@ -25,7 +25,7 @@ const Midfooter = () => {
         <div className='Midfooterlinks'>
             <h4>Useful Links</h4>
             <p>FAQ</p>
-            <p onClick={()=> Nav('/Help')}>Contact Us</p>
+            <p>Contact Us</p>
             <p onClick={()=> Nav('/Conditions')}>Terms and Conditions</p>
         </div>
         <div className='Midfooterlinks'>
