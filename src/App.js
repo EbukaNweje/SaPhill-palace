@@ -20,6 +20,7 @@ import Privacy from './components/Privacy';
 import Conditions from './components/Conditions';
 import Contactus from './components/Contactus'
 import Returnpolicy from './components/Returnpolicy';
+import Faq from './components/Faq';
 
 
 const App = () => {
@@ -42,6 +43,7 @@ const App = () => {
       <Route path='/Conditions/' element={<Conditions/>} />
       <Route path='/Help/' element={<Contactus/>} />
       <Route path='/Returnpolicy/' element={<Returnpolicy/>} />
+      <Route path='/FAQ/' element={<Faq/>} />
     </Routes>
     <FooterMain/>
   </BrowserRouter>

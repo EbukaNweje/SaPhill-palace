@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.d2203d9d.css",
-    "main.js": "/static/js/main.1b43bf06.js",
+    "main.css": "/static/css/main.311a678a.css",
+    "main.js": "/static/js/main.effc6937.js",
     "static/js/787.5639fac3.chunk.js": "/static/js/787.5639fac3.chunk.js",
     "static/media/cat9.jpg": "/static/media/cat9.fc0ae44057bf3c45e95c.jpg",
     "static/media/cat8.jpg": "/static/media/cat8.2c01db430080210a87a9.jpg",
     "static/media/cat10.jpg": "/static/media/cat10.395a8359a4fa10810e2b.jpg",
+    "static/media/cb-returnss-policy.jpg": "/static/media/cb-returnss-policy.3e3c6e7beb1bf37fa008.jpg",
     "static/media/home2.jpg": "/static/media/home2.564da552d72e04be326c.jpg",
     "static/media/cat1.jpg": "/static/media/cat1.e1d49503f944a2087ca9.jpg",
     "static/media/home1.jpg": "/static/media/home1.c685e55f2007a07e93f1.jpg",
-    "static/media/cb-returnss-policy.jpg": "/static/media/cb-returnss-policy.2164a95f98203499eb9a.jpg",
     "static/media/SaPhill Palace2.png": "/static/media/SaPhill Palace2.0666153fd9cf8496226d.png",
     "static/media/paystack-wc.png": "/static/media/paystack-wc.11f8018a97a060f96d35.png",
     "index.html": "/index.html",
-    "main.d2203d9d.css.map": "/static/css/main.d2203d9d.css.map",
-    "main.1b43bf06.js.map": "/static/js/main.1b43bf06.js.map",
+    "main.311a678a.css.map": "/static/css/main.311a678a.css.map",
+    "main.effc6937.js.map": "/static/js/main.effc6937.js.map",
     "787.5639fac3.chunk.js.map": "/static/js/787.5639fac3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d2203d9d.css",
-    "static/js/main.1b43bf06.js"
+    "static/css/main.311a678a.css",
+    "static/js/main.effc6937.js"
   ]
 }

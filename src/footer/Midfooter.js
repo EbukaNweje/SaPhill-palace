@@ -24,14 +24,14 @@ const Midfooter = () => {
         </div>
         <div className='Midfooterlinks'>
             <h4>Useful Links</h4>
-            <p>FAQ</p>
+            <p onClick={()=> Nav('/FAQ')}>FAQ</p>
             <p onClick={()=> Nav('/Help')}>Contact Us</p>
             <p onClick={()=> Nav('/Conditions')}>Terms and Conditions</p>
         </div>
         <div className='Midfooterlinks'>
             <h4>Ask Us A Question</h4>
             <p onClick={()=> Nav('/SellerRegistration')}>Sell on Saphill Palace</p>
-            <p>Seller policy</p>
+            {/* <p>Seller policy</p> */}
             <p onClick={()=> Nav('/Privacy')}>Privacy policy</p>
             <p onClick={()=> Nav('/Returnpolicy')}>Return policy</p>
         </div>
