@@ -19,6 +19,7 @@ import Search from './components/Search';
 import Privacy from './components/Privacy';
 import Conditions from './components/Conditions';
 import Contactus from './components/Contactus'
+import Returnpolicy from './components/Returnpolicy';
 
 
 const App = () => {
@@ -40,6 +41,7 @@ const App = () => {
       <Route path='/Privacy/' element={<Privacy/>} />
       <Route path='/Conditions/' element={<Conditions/>} />
       <Route path='/Help/' element={<Contactus/>} />
+      <Route path='/Returnpolicy/' element={<Returnpolicy/>} />
     </Routes>
     <FooterMain/>
   </BrowserRouter>

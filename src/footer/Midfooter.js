@@ -25,7 +25,7 @@ const Midfooter = () => {
         <div className='Midfooterlinks'>
             <h4>Useful Links</h4>
             <p>FAQ</p>
-            <p>Contact Us</p>
+            <p onClick={()=> Nav('/Help')}>Contact Us</p>
             <p onClick={()=> Nav('/Conditions')}>Terms and Conditions</p>
         </div>
         <div className='Midfooterlinks'>
@@ -33,7 +33,7 @@ const Midfooter = () => {
             <p onClick={()=> Nav('/SellerRegistration')}>Sell on Saphill Palace</p>
             <p>Seller policy</p>
             <p onClick={()=> Nav('/Privacy')}>Privacy policy</p>
-            <p>Return policy</p>
+            <p onClick={()=> Nav('/Returnpolicy')}>Return policy</p>
         </div>
     </div>
   )
