@@ -3,8 +3,8 @@ import React from 'react'
 const Saphillbuy = () => {
   return (
     <div className='Saphilsellcontent'>
-        <h3>How to sell on Saphill?</h3>
-<p>To fully enjoy shopping on Saphill, follow our simple guide:</p>
+        <h3>How to sell on Saphill Palace?</h3>
+<p>To fully enjoy shopping on Saphill Palace, follow our simple guide:</p>
 
 <h5>1. Search for the item</h5>
 

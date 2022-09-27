@@ -4,7 +4,7 @@ const Saphillsell = () => {
   return (
     <div className='Saphilsellcontent'>
         <h3>How Can I Sell On Saphill Palace?</h3>
-<p>Post your ads on Jiji effortlessly by following the steps below:</p>
+<p>Post your Products on Saphill Palace effortlessly by following the steps below:</p>
 <ol className='Orderedlist'>
     <li>1.Sign in to your profile on Saphill Palace;</li>
     <li>2.Click on the button "Sell on Saphill Palace";</li>

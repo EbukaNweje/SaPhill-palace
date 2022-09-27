@@ -39,25 +39,25 @@ const Faq = () => {
                 setBuy(false)
                 setLegal(false)
                 setGood(false)
-            }}>How can i sell on Saphill?</li>
+            }}>How can I sell on Saphill Palace?</li>
             <li onClick={()=>{
                 setSell(false)
                 setBuy(true)
                 setLegal(false)
                 setGood(false)
-            }}>How can i buy something on Saphill?</li>
+            }}>How can I buy something on Saphill Palace?</li>
             <li onClick={()=>{
                 setSell(false)
                 setBuy(false)
                 setLegal(true)
                 setGood(false)
-            }}>How to report illegal activity on Saphill? </li>
+            }}>How to report illegal activity on Saphill Palace? </li>
             <li onClick={()=>{
                 setSell(false)
                 setBuy(false)
                 setLegal(false)
                 setGood(true)
-            }}>Prohibited Products?</li>
+            }}>Prohibited Products on SaPhill Palace?</li>
         </ul>
         <section className='Newfaqcontent'> 
         {
