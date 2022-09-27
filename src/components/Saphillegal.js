@@ -4,7 +4,7 @@ const Saphillegal = () => {
   return (
     <div className='Saphilsellcontent'>
         <h3>How to report Illegal activity on Saphill Palace?</h3>
-        <p>If you see something suspicious on Jiji, please let us know about it by following the steps below:</p>
+        <p>If you see something suspicious on Saphill Palace, please let us know about it by following the steps below:</p>
 
 <p>1.Click on "Contact us"</p>
 

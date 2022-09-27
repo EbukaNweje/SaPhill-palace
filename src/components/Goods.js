@@ -4,7 +4,7 @@ const Goods = () => {
   return (
     <div className='Saphilsellcontent'>
       <h3>Prohibited Goods?</h3>
-       <p> Here is a non-exhaustive list of goods and services promotion of which is prohibited on Jiji in Nigeria:</p>
+       <p> Here is a non-exhaustive list of goods and services promotion of which is prohibited on Saphill Palace in Nigeria:</p>
 
 <p>1.Narcotics, steroids, and any drugs or medications that require a prescription from a licensed medical specialist</p>
 <p>2.Weapons</p>

@@ -3,11 +3,7 @@ import React, {useState} from 'react'
 const SellerSignup = () => {
 const [login, setLogin] = useState(true)
 const [register, setRegister] = useState(false)   
-const [email, setRemail] = useState()
-const [password, setPassword] = useState("")
-const [name, setrname] = useState("")
-const [lemail, setLemail] = useState("")
-const [lpassword, setLpassword] = useState("")
+
   return (
     <div className='SellerRegistercont'>
        <div className='RegisterDiv'>
