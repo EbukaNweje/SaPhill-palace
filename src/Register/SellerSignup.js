@@ -133,6 +133,11 @@ const dispatch = useDispatch();
               <div className='RegisterAcct'>
                Log In Your Account
               </div>
+              {message?.msg && (
+              <div className={message?.error ? "alert alert-success" :  "alert alert-danger"} role="alert">
+                {message.msg}
+              </div>
+               )}
             <section className='RegistercardInput'>
                 <input className='RegisterInput' type="text" placeholder='email' value={lemail} onChange ={(e)=>{setLemail(e.target.value)}}/>
                 <input className='RegisterInput' type="password" placeholder='password' value={lpass} onChange ={(e)=>{setLpass(e.target.value)}}/>
@@ -152,6 +157,11 @@ const dispatch = useDispatch();
               <div className='RegisterAcct'>
               Register An Account
          </div>
+         `{message?.msg && (
+              <div className={message?.error ? "alert alert-success" :  "alert alert-danger"} role="alert">
+                {message.msg}
+              </div>
+               )}
             <form className='RegistercardInput'>
             <input className='RegisterInput' type="text" value={rname} onChange={e=> setRname(e.target.value)} placeholder='FirstName'/>
             <input className='RegisterInput' type="text" value={rlastname} onChange={e=> setRlastname(e.target.value)} placeholder='LastName'/>
