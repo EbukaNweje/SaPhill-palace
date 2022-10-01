@@ -215,6 +215,7 @@ const Create = ()=>{
         price: yup.number().required("This has to be filled"),
         // Categories: yup.string().required("This has to be filled"),
     })
+    
     const {register, reset, handleSubmit, formState:{errors}} =
     useForm({resolver: yupResolver(yupModel)})
 

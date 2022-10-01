@@ -9,7 +9,8 @@ const initialState = {
   GetUser: [],
   Mycat: [],
   AllProduct: [],
-  SearchItem: []
+  SearchItem: [],
+  GetSell: []
   // totalRoomCost: 0,
 };
 
@@ -79,6 +80,10 @@ const ProductState = createSlice({
     state.GetUser = payload
   },
 
+  GetSell: (state, {payload})=>{
+    state.GetSell = payload
+  },
+
   GetAllProduct: (state, {payload})=>{
     state.AllProduct = payload
   },
@@ -90,11 +95,12 @@ const ProductState = createSlice({
   signOut: (state) => {
     state.LogId = "";
     state.GetUser = [];
+    state.GetSell = [];
   },
     
   },
 });
 
-export const { addBooking, addProduct, removeBooking, changeDays, search, totalState, addId, removeId,GetUser, GetCat, signOut, GetAllProduct} =
+export const { GetSell, addBooking, addProduct, removeBooking, changeDays, search, totalState, addId, removeId, GetUser, GetCat, signOut, GetAllProduct} =
   ProductState.actions;
 export default ProductState.reducer;

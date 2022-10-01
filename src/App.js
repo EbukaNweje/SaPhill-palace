@@ -21,6 +21,7 @@ import Conditions from './components/Conditions';
 import Contactus from './components/Contactus'
 import Returnpolicy from './components/Returnpolicy';
 import Faq from './components/Faq';
+import SellDash from './SellDashboard/SellDash';
 
 
 const App = () => {
@@ -36,6 +37,7 @@ const App = () => {
       <Route path='/Registration' element={<Registration/>}/>
       <Route path='/Details/:id' element={<Details/>}/>
       <Route path='/AdminDashboard' element={<AdminDash/>} />
+      <Route path='/SellDashboard' element={<SellDash/>} />
       <Route path='/ProductPage/:id/:CartigoriesName' element={<ProductPage/>}/>
       <Route path='/SellerRegistration' element={<SellerRigister/>} />
       <Route path='/Search/:SearchName' element={<Search/>} />

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.311a678a.css",
-    "main.js": "/static/js/main.6f768204.js",
+    "main.js": "/static/js/main.66f93e54.js",
     "static/js/787.5639fac3.chunk.js": "/static/js/787.5639fac3.chunk.js",
     "static/media/cat9.jpg": "/static/media/cat9.fc0ae44057bf3c45e95c.jpg",
     "static/media/cat8.jpg": "/static/media/cat8.2c01db430080210a87a9.jpg",
@@ -14,11 +14,11 @@
     "static/media/paystack-wc.png": "/static/media/paystack-wc.11f8018a97a060f96d35.png",
     "index.html": "/index.html",
     "main.311a678a.css.map": "/static/css/main.311a678a.css.map",
-    "main.6f768204.js.map": "/static/js/main.6f768204.js.map",
+    "main.66f93e54.js.map": "/static/js/main.66f93e54.js.map",
     "787.5639fac3.chunk.js.map": "/static/js/787.5639fac3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.311a678a.css",
-    "static/js/main.6f768204.js"
+    "static/js/main.66f93e54.js"
   ]
 }

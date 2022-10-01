@@ -18,6 +18,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.persisitedReducer.bookings);
   const GetUser = useSelector((state) => state.persisitedReducer.GetUser);
+  const GetSell = useSelector((state) => state.persisitedReducer.GetSell);
     const MyProduct = useSelector((state) => state.persisitedReducer.AllProduct);
     const [searchinput, setSearchinput] = useState("")
      const filterSearch = ()=> {
@@ -32,7 +33,7 @@ const Header = () => {
     // console.log("this is it",datasearch)
   const id = JSON.parse(localStorage.getItem("User"))
   const admin = GetUser.isAdmin
-  // console.log("this   is the user",GetUser.name)
+  // console.log("this is the sell ", GetSell)
   
   const [toggle, setToggle] = useState(false)
     const onToggle = () => {
@@ -75,22 +76,30 @@ const Header = () => {
               </div>
             <ul className='UserDeee'> 
             {
-              !id ? <HiOutlineUser className='Icons' onClick={() => hist('/Registration')}/> :<HiOutlineUser className='Icons' onClick={() => hist('/')}/>
+              id? 
+              <HiOutlineUser className='Icons' onClick={() => hist('/')}/>
+              : 
+              <HiOutlineUser className='Icons' onClick={() => hist('/Registration')}/>
             }
                {
-                 !id?
-                <ul id="UserNavigations" onClick={() => hist('/Registration')}>
-                <li> Login </li> 
-                {/* <li> Register </li>  */}
-                </ul>
-                : 
-                <ul onClick={() => hist('/')} className='userD' >
-                  <li>{id.message}</li>
-                </ul>
+                id?(
+                  <ul onClick={() => hist('/')} className='userD' >
+                   <li>{id.message}</li>
+                 </ul>
+                 )
+                 : GetSell?(
+                   <ul onClick={() => hist('/')} className='userD' >
+                   <li>{GetSell.message}</li>
+                 </ul>
+                 ): null
                }
             </ul>
             {
               admin ? <li onClick={() => hist('/AdminDashboard')} className='dashddd'><MdOutlineSpaceDashboard className='Icons'/></li> : null
+            }
+
+            {
+              GetSell.data ? <li onClick={() => hist('/SellDashboard')} className='dashddd'><MdOutlineSpaceDashboard className='Icons'/></li> : null
             }
           </div>
             {
@@ -100,7 +109,18 @@ const Header = () => {
                     localStorage.removeItem("User");
                     dispatch(signOut())
                   }} className='signoutd' >Sign Out</li>
-              </ul> : ""
+              </ul> :
+              GetSell.data ? (
+                <ul className="signout">
+                <li onClick={()=>{
+                      localStorage.removeItem("User");
+                      dispatch(signOut())
+                    }} className='signoutd' >Sign Out</li>
+                </ul>
+              ):
+              <ul id="UserNavigations" onClick={() => hist('/Registration')}>
+                 <li> Login </li> 
+                 </ul>
             }
       </div>
     </div>
