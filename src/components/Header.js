@@ -65,7 +65,7 @@ const Header = () => {
                 }}/>
             }
                </div>
-              <input type='text' placeholder='what do you whant to buy?' value={searchinput} onChange={(e)=> setSearchinput(e.target.value)}/>
+              <input type='text' placeholder='what do you want to buy?' value={searchinput} onChange={(e)=> setSearchinput(e.target.value)}/>
               <button onClick={()=> filterSearch()}> Search </button>
             </div>
           </div>
