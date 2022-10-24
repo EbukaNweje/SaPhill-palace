@@ -226,12 +226,12 @@ const Booking = () => {
 
           <div className='BookingWrapperRightAgree'>
             <input type="checkbox"/>
-            <label> I have read and agree to the website terms and conditions <span> * </span> </label>
+            <label> I have read and agreed to the website terms and conditions <span> * </span> </label>
           </div>
 
           {
             debitCard ? (<div className='BookingWrapperRightOrder' onClick={Payment}> Place order </div>) : 
-           payOnDelivering ? (<div className='BookingWrapperRightOrder' onClick={PaymentD}> Place D </div>) : null
+           payOnDelivering ? (<div className='BookingWrapperRightOrder' onClick={PaymentD}> Place order </div>) : null
             
           }
 

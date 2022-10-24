@@ -236,6 +236,7 @@ const Create = ()=>{
       formData.append("price", price);
       formData.append("quantity", quantity);
       formData.append("image", imageDB);
+
       const config = {
         headers: {
           "content-type": "multipart/formData"
@@ -245,7 +246,7 @@ const Create = ()=>{
     //         headers: {
     //             authorization :`Ebuka ${token}`,
     //         },
-    //     }
+    //     
     // console.log(Mycart)
 
       await axios.post(`https://saphill-palace.herokuapp.com/api/seller/create/${SellerId}/${cati}`, formData, config)
