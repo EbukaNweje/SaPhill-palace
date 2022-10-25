@@ -118,9 +118,10 @@ const Header = () => {
                     }} className='signoutd' >Sign Out</li>
                 </ul>
               ):
-              <ul id="UserNavigations" onClick={() => hist('/Registration')}>
-                 <li> Login </li> 
-                 </ul>
+              null
+              // <ul id="UserNavigations" onClick={() => hist('/Registration')}>
+              //    <li> Login </li> 
+              //    </ul>
             }
       </div>
     </div>
