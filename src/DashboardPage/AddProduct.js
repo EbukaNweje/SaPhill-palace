@@ -248,7 +248,7 @@ const Create = ()=>{
     //     }
     // console.log(Mycart)
 
-      await axios.post(`https://saphill-palace.herokuapp.com/user/add/${id}/${cati}`, formData, config)
+      await axios.post(`https://saphillpalaceback.up.railway.app/user/add/${id}/${cati}`, formData, config)
       reset()
       }catch(error){
         if (error.response) {

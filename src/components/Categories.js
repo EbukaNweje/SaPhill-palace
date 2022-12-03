@@ -22,7 +22,7 @@ const Categories = () => {
     // }   
 
     useEffect(()=>{
-        Axios.get("https://saphill-palace.herokuapp.com/user/allcat")
+        Axios.get("https://saphillpalaceback.up.railway.app/user/allcat")
         .then(res =>{dispatch(GetCat(res.data.data))})
     },[dispatch])
 

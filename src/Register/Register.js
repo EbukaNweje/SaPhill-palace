@@ -19,8 +19,8 @@ const [lemail, setLemail] = useState("")
 const [lpassword, setLpassword] = useState("")
 const [message, setMessage] = useState({ error: false, msg: "" });
 
-const url = "https://saphill-palace.herokuapp.com/user/register"
-const urlL = "https://saphill-palace.herokuapp.com/user/login"
+const url = "https://saphillpalaceback.up.railway.app/user/register"
+const urlL = "https://saphillpalaceback.up.railway.app/user/login"
 
   const RegisterUser = ()=>{
     Axios.post(url,{

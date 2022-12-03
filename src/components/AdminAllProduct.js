@@ -8,10 +8,11 @@ const AdminAllProduct = () => {
 
   const deleteHandler = async (_id) => {
     try{
-      await axios.delete(`https://saphill-palace.herokuapp.com/user/product/${_id}`)
+      await axios.delete(`https://saphillpalaceback.up.railway.app/user/product/${_id}`)
       window.location.reload()
     }catch(error){
       console.log(error.response)
+      
     }
    
   };

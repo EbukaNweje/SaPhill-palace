@@ -15,7 +15,7 @@ const [myValue, setMyValue] = useState("")
 dispatch(addProduct(myValue));
 
 
-const URL = `https://saphill-palace.herokuapp.com/user/product/${id}`
+const URL = `https://saphillpalaceback.up.railway.app/user/product/${id}`
 
 
     Axios.get(URL)

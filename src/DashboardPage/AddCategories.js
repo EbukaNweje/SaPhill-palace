@@ -4,7 +4,7 @@ import "./CSS/DashMobile.css"
 import Axios from "axios"
 
 const AddCategories = () => {
-  const url = "https://saphill-palace.herokuapp.com/user/cat"
+  const url = "https://saphillpalaceback.up.railway.app/user/cat"
   const [data, setData] =useState({
     name: "",
   })

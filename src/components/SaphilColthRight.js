@@ -30,7 +30,7 @@ const SaphilColthRight = () => {
     // }
 
     useEffect(()=>{
-      Axios.get('https://saphill-palace.herokuapp.com/user/products/')
+      Axios.get('https://saphillpalaceback.up.railway.app/user/products/')
       .then(res =>dispatch(GetAllProduct(res.data.data)))
       // localStorage.setItem("ClothApi", JSON.stringify(res.data.data))  
     },[dispatch])

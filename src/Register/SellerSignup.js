@@ -32,8 +32,8 @@ const dispatch = useDispatch();
   const [lemail, setLemail] = useState('')
   // const [checklog, setChecklog] = useState(false)
   const [message, setMessage] = useState({ error: false, msg: "" });
-  const url = "https://saphill-palace.herokuapp.com/api/Seller/create"
-  const urlL = "https://saphill-palace.herokuapp.com/api/Seller/login"
+  const url = "https://saphillpalaceback.up.railway.app/api/Seller/create"
+  const urlL = "https://saphillpalaceback.up.railway.app/api/Seller/login"
 
  
 
